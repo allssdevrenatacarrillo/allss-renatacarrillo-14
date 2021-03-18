@@ -11,15 +11,11 @@
             <field name="_allss_titular_inst"/>
             <field name="_allss_nome"/>
             <field name="_allss_cpf"/>
-        </xpath>
-        <xpath expr="//field[@name='cpf']" position="after">
-            <group>
-                <field name="_allss_cnpj"/>
-                <field name="_allss_gps"/>
-                <field name="_allss_respon"/>
-                <field name="_allss_met_pag"/>
-                <field name="_allss_origem"/>
-            </group>
+            <field name="_allss_cnpj"/>
+            <field name="_allss_gps"/>
+            <field name="_allss_respon"/>
+            <field name="_allss_met_pag"/>
+            <field name="_allss_origem"/>
         </xpath>
 
         <page name="internal_notes" position="after">
