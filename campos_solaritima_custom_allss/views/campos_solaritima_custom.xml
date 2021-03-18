@@ -6,15 +6,16 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml"> 
 
+            <field name="_allss_fornecedor"/>
+            <field name="_allss_titular_inst"/>
+            <field name="_allss_nome"/>
+            <field name="_allss_cpf"/>
+
         <page name="internal_notes" position="after">
-            <page string="Dados da Instalação">
+            <page name="dados_instalacao" string="Dados da Instalação">
                 <form string="Dados da Instalação">
                     <group>
                         <field name="_allss_concessionaria"/>
-                        <field name="_allss_titular_inst"/>
-                        <field name="_allss_nome"/>
-                        
-
                         <!-- <group string="Pagamento" name="infPagamento">
                             <field name="_allss_sheet"/>
                             <field name="_allss_wage" widget="monetary"/>
@@ -40,6 +41,16 @@
                         <group string="Periculosidade" name="infPericulosidade">
                             <field name="_allss_dangerousness" widget="monetary"/>
                         </group> -->
+                    </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="dados_instalacao" position="after">
+            <page string="Dados para Dimensionamento">
+                <form string="Dados para Dimensionamento">
+                    <group>
+                        <field name="_allss_concessionaria"/>
                     </group>
                 </form>
             </page>
