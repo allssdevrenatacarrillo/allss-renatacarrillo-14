@@ -6,12 +6,42 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml"> 
 
-            <group>
-                <group string="Testando" name="infTeste">
-                    <field name="_allss_teste"/>
-                </group>
-            </group>
-            
+        <page name="public" position="after">
+            <page string="Dados da Instalação">
+                <form string="Dados da Instalação">
+                    <group>
+                        <field name="_allss_concessionaria"/>
+
+                        <!-- <group string="Pagamento" name="infPagamento">
+                            <field name="_allss_sheet"/>
+                            <field name="_allss_wage" widget="monetary"/>
+                            <field name="_allss_syndicate_discount" widget="monetary"/>
+                        </group>
+
+                        <group string="Convênio Médico" name="infConvMed">
+                            <field name="_allss_health_insurance" widget="monetary"/>
+                        </group>
+
+                        <group string="Bônus" name="infBonus">
+                            <field name="_allss_bonus" widget="monetary"/>
+                            <field name="_allss_goals" widget="monetary"/>
+                            <field name="_allss_gratification" widget="monetary"/>
+                        </group>
+
+                        <group string="Ajuda de Custo" name="infAjudaCusto">
+                            <field name="_allss_allowance_help" widget="monetary"/>
+                            <field name="_allss_snack" widget="monetary"/>
+                            <field name="_allss_fuel" widget="monetary"/>
+                        </group>
+
+                        <group string="Periculosidade" name="infPericulosidade">
+                            <field name="_allss_dangerousness" widget="monetary"/>
+                        </group> -->
+                    </group>
+                </form>
+            </page>
+        </page>
+
         </field>
     </record>
 </data>
