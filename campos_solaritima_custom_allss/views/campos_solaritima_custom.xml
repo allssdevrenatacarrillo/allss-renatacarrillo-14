@@ -11,6 +11,11 @@
             <field name="_allss_titular_inst"/>
             <field name="_allss_nome"/>
             <field name="_allss_cpf"/>
+            <field name="_allss_cnpj"/>
+            <field name="_allss_gps"/>
+            <field name="_allss_respon"/>
+            <field name="_allss_met_pag"/>
+            <field name="_allss_origem"/>
         </xpath>
 
         <page name="internal_notes" position="after">
@@ -18,6 +23,8 @@
                 <form string="Dados da Instalação">
                     <group>
                         <field name="_allss_concessionaria"/>
+                        <field name="_allss_nome_titular_inst"/>
+                        <field name="_allss_sobr_titular_inst"/>
                         <!-- <group string="Pagamento" name="infPagamento">
                             <field name="_allss_sheet"/>
                             <field name="_allss_wage" widget="monetary"/>

@@ -12,8 +12,15 @@ class ResPartnerCustom(models.Model):
     _allss_titular_inst = fields.Char("Copiar Cliente para Titular da Instação?")
     _allss_nome = fields.Char("Nome")
     _allss_cpf = fields.Char("CPF do Cliente")
+    _allss_cnpj = fields.Char("CNPJ do Cliente")
+    _allss_gps = fields.Char("GPS")
+    _allss_respon = fields.Char("Responsável")
+    _allss_met_pag = fields.Char("Método de Pagamento")
+    _allss_origem = fields.Char("Origem")
     # GRUPO: DADOS DA INSTALAÇÃO
     _allss_concessionaria = fields.Char("Concessionaria")
+    _allss_nome_titular_inst = fields.Char("Nome Titular da Instalação")
+    _allss_sobr_titular_inst = fields.Char("Sobrenome Titular da Instalação")
     # GRUPO: DADOS PARA DIMENSIONAMENTO
     # GRUPO: FOTOS DA INSTALAÇÃO
     # GRUPO: DOCUMENTOS DE PROJETO CONCESSIONÁRIA
