@@ -21,6 +21,7 @@
         <page name="internal_notes" position="after">
             <page name="dados_instalacao" string="Dados da Instalação">
                 <form string="Dados da Instalação">
+                <group>
                     <group string="Concessionária" name="titular_grupo_um">
                         <field name="_allss_concessionaria"/>
                     </group>
@@ -33,6 +34,7 @@
                         <field name="_allss_cpf_inst"/>
                         <field name="_allss_cnpj_inst"/>
                     </group>
+                </group>
                 </form>
             </page>
         </page>
@@ -41,8 +43,9 @@
             <page string="Dados para Dimensionamento">
                 <form string="Dados para Dimensionamento">
                     <group>
-                        <field name="_allss_concessionaria"/>
+                        
                     </group>
+
                 </form>
             </page>
         </page>
