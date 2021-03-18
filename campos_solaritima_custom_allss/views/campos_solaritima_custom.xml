@@ -26,8 +26,9 @@
                         <field name="_allss_nome_titular_inst"/>
                         <field name="_allss_sobr_titular_inst"/>
 
-                    <group name="inst_grupo_um">
+                    <group string="" name="inst_grupo_um">
                         <field name="_allss_cpf_inst"/>
+                        <field name="_allss_cnpj_inst"/>
                     </group>
 
                         <!-- <group string="Pagamento" name="infPagamento">

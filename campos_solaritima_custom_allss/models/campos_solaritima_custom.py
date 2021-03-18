@@ -22,7 +22,9 @@ class ResPartnerCustom(models.Model):
     _allss_nome_titular_inst = fields.Char("Nome Titular da Instalação")
     _allss_sobr_titular_inst = fields.Char("Sobrenome Titular da Instalação")
     _allss_cpf_inst = fields.Char("CPF da Instalação")
-    
+    _allss_cnpj_inst = fields.Char("CNPJ da Instalação")
+    _allss_end_inst = fields.Char("Endereço da Instalação")
+
     # GRUPO: DADOS PARA DIMENSIONAMENTO
     # GRUPO: FOTOS DA INSTALAÇÃO
     # GRUPO: DOCUMENTOS DE PROJETO CONCESSIONÁRIA
