@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml"> 
 
-        <page name="public" position="after">
+        <page name="internal_notes" position="after">
             <page string="Dados da Instalação">
                 <form string="Dados da Instalação">
                     <group>
