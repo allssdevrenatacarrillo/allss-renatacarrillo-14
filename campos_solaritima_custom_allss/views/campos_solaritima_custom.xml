@@ -25,6 +25,11 @@
                         <field name="_allss_concessionaria"/>
                         <field name="_allss_nome_titular_inst"/>
                         <field name="_allss_sobr_titular_inst"/>
+
+                    <group name="inst_grupo_um">
+                        <field name="_allss_cpf_inst"/>
+                    </group>
+
                         <!-- <group string="Pagamento" name="infPagamento">
                             <field name="_allss_sheet"/>
                             <field name="_allss_wage" widget="monetary"/>
