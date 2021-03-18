@@ -29,11 +29,10 @@
                         <field name="_allss_concessionaria"/>
                         <field name="_allss_nome_titular_inst"/>
                         <field name="_allss_sobr_titular_inst"/>
-
+                    </group>
                     <group string="" name="inst_grupo_um">
                         <field name="_allss_cpf_inst"/>
                         <field name="_allss_cnpj_inst"/>
-                    </group>
                     </group>
                 </form>
             </page>
