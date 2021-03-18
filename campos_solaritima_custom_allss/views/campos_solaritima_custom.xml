@@ -6,10 +6,12 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml"> 
 
-            <!-- <field name="_allss_fornecedor"/>
+        <xpath expr="//field[@name='vat']" position="after">
+            <field name="_allss_fornecedor"/>
             <field name="_allss_titular_inst"/>
             <field name="_allss_nome"/>
-            <field name="_allss_cpf"/> -->
+            <field name="_allss_cpf"/>
+        </xpath>
 
         <page name="internal_notes" position="after">
             <page name="dados_instalacao" string="Dados da Instalação">
