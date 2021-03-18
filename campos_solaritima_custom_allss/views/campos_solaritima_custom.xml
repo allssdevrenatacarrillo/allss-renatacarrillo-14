@@ -12,6 +12,8 @@
             <field name="_allss_nome"/>
             <field name="_allss_cpf"/>
             <field name="_allss_cnpj"/>
+        </xpath>
+        <xpath expr="//field[@name='category_id']" position="after">
             <field name="_allss_gps"/>
             <field name="_allss_respon"/>
             <field name="_allss_met_pag"/>
