@@ -25,12 +25,15 @@
         <page name="internal_notes" position="after">
             <page name="dados_instalacao" string="Dados da Instalação">
                 <form string="Dados da Instalação">
-                    <group>
+                    <group string="Concessionária" name="titular_grupo_um">
+                        <field name="_allss_concessionaria"/>
+                    </group>
+                    <group string="Titular" name="titular_grupo_dois">
                         <field name="_allss_concessionaria"/>
                         <field name="_allss_nome_titular_inst"/>
                         <field name="_allss_sobr_titular_inst"/>
                     </group>
-                    <group string="" name="inst_grupo_um">
+                    <group string="Documentos" name="inst_grupo_tres">
                         <field name="_allss_cpf_inst"/>
                         <field name="_allss_cnpj_inst"/>
                     </group>
