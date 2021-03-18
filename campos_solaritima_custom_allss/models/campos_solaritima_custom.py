@@ -14,10 +14,18 @@ class ResPartnerCustom(models.Model):
     _allss_cpf = fields.Char("CPF do Cliente")
     # GRUPO: DADOS DA INSTALAÇÃO
     _allss_concessionaria = fields.Char("Concessionaria")
+    # GRUPO: DADOS PARA DIMENSIONAMENTO
+    # GRUPO: FOTOS DA INSTALAÇÃO
+    # GRUPO: DOCUMENTOS DE PROJETO CONCESSIONÁRIA
+    # GRUPO: FOTOS DOCUMENTOS PESSOA FÍSICA
+    # GRUPO: DADOS DE FINANCIAMENTO
+    # GRUPO: PEDIDOS DE COMPRA - NOTAS FISCAIS - BOLETOS
+    # GRUPO: PEDIDOS DE VENDA - NOTAS FISCAIS - BOLETOS
+    # GRUPO: DADOS DE MONITORAÇÃO
 
 
 
-    
+
     # _allss_wage = fields.Monetary("Salário") 
     # _allss_health_insurance = fields.Boolean("Convênio Médico")
     # _allss_date_exped_cnh = fields.Date("Data de Expedição")
