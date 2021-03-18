@@ -11,11 +11,15 @@
             <field name="_allss_titular_inst"/>
             <field name="_allss_nome"/>
             <field name="_allss_cpf"/>
-            <field name="_allss_cnpj"/>
-            <field name="_allss_gps"/>
-            <field name="_allss_respon"/>
-            <field name="_allss_met_pag"/>
-            <field name="_allss_origem"/>
+        </xpath>
+        <xpath expr="//field[@name='cpf']" position="after">
+            <group>
+                <field name="_allss_cnpj"/>
+                <field name="_allss_gps"/>
+                <field name="_allss_respon"/>
+                <field name="_allss_met_pag"/>
+                <field name="_allss_origem"/>
+            </group>
         </xpath>
 
         <page name="internal_notes" position="after">
@@ -30,32 +34,6 @@
                         <field name="_allss_cpf_inst"/>
                         <field name="_allss_cnpj_inst"/>
                     </group>
-
-                        <!-- <group string="Pagamento" name="infPagamento">
-                            <field name="_allss_sheet"/>
-                            <field name="_allss_wage" widget="monetary"/>
-                            <field name="_allss_syndicate_discount" widget="monetary"/>
-                        </group>
-
-                        <group string="Convênio Médico" name="infConvMed">
-                            <field name="_allss_health_insurance" widget="monetary"/>
-                        </group>
-
-                        <group string="Bônus" name="infBonus">
-                            <field name="_allss_bonus" widget="monetary"/>
-                            <field name="_allss_goals" widget="monetary"/>
-                            <field name="_allss_gratification" widget="monetary"/>
-                        </group>
-
-                        <group string="Ajuda de Custo" name="infAjudaCusto">
-                            <field name="_allss_allowance_help" widget="monetary"/>
-                            <field name="_allss_snack" widget="monetary"/>
-                            <field name="_allss_fuel" widget="monetary"/>
-                        </group>
-
-                        <group string="Periculosidade" name="infPericulosidade">
-                            <field name="_allss_dangerousness" widget="monetary"/>
-                        </group> -->
                     </group>
                 </form>
             </page>
