@@ -11,6 +11,9 @@
                 <form string="Dados da Instalação">
                     <group>
                         <field name="_allss_concessionaria"/>
+                        <field name="_allss_titular_inst"/>
+                        <field name="_allss_nome"/>
+                        
 
                         <!-- <group string="Pagamento" name="infPagamento">
                             <field name="_allss_sheet"/>
