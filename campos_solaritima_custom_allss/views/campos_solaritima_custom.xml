@@ -9,7 +9,7 @@
         <xpath expr="//field[@name='vat']" position="after">
             <field name="_allss_fornecedor"/>
             <field name="_allss_titular_inst"/>
-            <field name="_allss_nome"/>
+            <!-- <field name="_allss_nome"/> -->
             <field name="_allss_cpf"/>
             <field name="_allss_cnpj"/>
         </xpath>
