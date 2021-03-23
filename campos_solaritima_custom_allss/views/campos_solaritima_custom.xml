@@ -5,7 +5,6 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml"> 
-
         <xpath expr="//field[@name='vat']" position="after">
             <field name="_allss_fornecedor"/>
             <field name="_allss_titular_inst"/>
@@ -17,7 +16,6 @@
             <field name="_allss_met_pag"/>
             <field name="_allss_origem"/>
         </xpath>
-
         <page name="internal_notes" position="after">
             <page name="dados_instalacao" string="Dados da Instalação">
                 <form string="Dados da Instalação">
@@ -250,7 +248,6 @@
                 </form>
             </page>
         </page>
-
         </field>
     </record>
 </data>
