@@ -177,6 +177,25 @@
             </page>
         </page>
 
+        <page name="fotos_doc_pessoa_fisica" position="after">
+            <page name="dados_financ" string="Dados de Financiamento">
+                <form string="Dados de Financiamento">
+                <group>
+                    <group>
+                        <field name="_allss_ficha_financ_1"/>
+                        <field name="_allss_ficha_financ_2"/>
+                        <field name="_allss_ficha_financ_3"/>
+                        <field name="_allss_ficha_financ_4"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_boleto_financ"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
 
         </field>
     </record>

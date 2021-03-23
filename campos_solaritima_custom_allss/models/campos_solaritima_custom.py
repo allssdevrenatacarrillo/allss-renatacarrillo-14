@@ -85,17 +85,13 @@ class ResPartnerCustom(models.Model):
     _allss_vend_doc_pessoa_fisica = fields.Binary("Comprovante de Venda")
     _allss_ender_doc_pessoa_fisica = fields.Binary("Comprovante Endereço")
     # GRUPO: DADOS DE FINANCIAMENTO
-    
+    _allss_ficha_financ_1 = fields.Binary("Ficha Financiamento - 1")
+    _allss_ficha_financ_2 = fields.Binary("Ficha Financiamento - 2")
+    _allss_ficha_financ_3 = fields.Binary("Ficha Financiamento - 3")
+    _allss_ficha_financ_4 = fields.Binary("Ficha Financiamento - 4")
+    _allss_boleto_financ = fields.Binary("Boletos de Financiamento")
     # GRUPO: PEDIDOS DE COMPRA - NOTAS FISCAIS - BOLETOS
     # GRUPO: PEDIDOS DE VENDA - NOTAS FISCAIS - BOLETOS
     # GRUPO: DADOS DE MONITORAÇÃO
-
-
-
-
-    # _allss_wage = fields.Monetary("Salário") 
-    # _allss_health_insurance = fields.Boolean("Convênio Médico")
-    # _allss_date_exped_cnh = fields.Date("Data de Expedição")
-    # _allss_sheet = fields.Integer("Folha/Ficha")
 
     
