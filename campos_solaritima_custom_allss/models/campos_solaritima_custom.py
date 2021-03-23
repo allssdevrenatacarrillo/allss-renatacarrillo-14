@@ -10,7 +10,7 @@ class ResPartnerCustom(models.Model):
     # GRUPO: CLIENTE
     _allss_fornecedor = fields.Char("Fornecedor")
     _allss_titular_inst = fields.Char("Copiar Cliente para Titular da Instação?")
-    _allss_nome = fields.Char("Nome")
+    # _allss_nome = fields.Char("Nome")
     _allss_cpf = fields.Char("CPF do Cliente")
     _allss_cnpj = fields.Char("CNPJ do Cliente")
     _allss_gps = fields.Char("GPS")
@@ -24,6 +24,14 @@ class ResPartnerCustom(models.Model):
     _allss_cpf_inst = fields.Char("CPF da Instalação")
     _allss_cnpj_inst = fields.Char("CNPJ da Instalação")
     _allss_end_inst = fields.Char("Endereço da Instalação")
+    _allss_city_inst = fields.Char("Cidade da Instalação")
+    _allss_est_inst = fields.Char("Estado da Instalação")
+    _allss_cep_inst = fields.Char("CEP da Instalação")
+    _allss_tp_estab_inst = fields.Char("Tipo de Estabelecimento")
+    _allss_unid_consum_inst = fields.Char("Unidade Consumidora")
+    _allss_class_inst = fields.Char("Classe da Instalação")
+    _allss_gps_inst = fields.Char("GPS da Instalação")
+    _allss_obs_inst = fields.Char("Observações da Instalação")
 
     # GRUPO: DADOS PARA DIMENSIONAMENTO
     # GRUPO: FOTOS DA INSTALAÇÃO
