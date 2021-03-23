@@ -32,8 +32,22 @@ class ResPartnerCustom(models.Model):
     _allss_class_inst = fields.Char("Classe da Instalação")
     _allss_gps_inst = fields.Char("GPS da Instalação")
     _allss_obs_inst = fields.Char("Observações da Instalação")
-
     # GRUPO: DADOS PARA DIMENSIONAMENTO
+    _allss_tp_telhado_dimen = fields.Char("Tipo de Telhado")
+    _allss_md_consu_dimen = fields.Char("Média Consumo KWh")
+    _allss_qtd_mes_dimen = fields.Char("Quantidade Meses KWh")
+    _allss_consu_dimen_1 = fields.Char("Consumo KWh Mês 1")
+    _allss_consu_dimen_2 = fields.Char("Consumo KWh Mês 2")
+    _allss_consu_dimen_3 = fields.Char("Consumo KWh Mês 3")
+    _allss_consu_dimen_4 = fields.Char("Consumo KWh Mês 4")
+    _allss_consu_dimen_5 = fields.Char("Consumo KWh Mês 5")
+    _allss_consu_dimen_6 = fields.Char("Consumo KWh Mês 6")
+    _allss_consu_dimen_7 = fields.Char("Consumo KWh Mês 7")
+    _allss_consu_dimen_8 = fields.Char("Consumo KWh Mês 8")
+    _allss_consu_dimen_9 = fields.Char("Consumo KWh Mês 9")
+    _allss_consu_dimen_10 = fields.Char("Consumo KWh Mês 10")
+    _allss_consu_dimen_11 = fields.Char("Consumo KWh Mês 11")
+    _allss_consu_dimen_12 = fields.Char("Consumo KWh Mês 12")
     # GRUPO: FOTOS DA INSTALAÇÃO
     # GRUPO: DOCUMENTOS DE PROJETO CONCESSIONÁRIA
     # GRUPO: FOTOS DOCUMENTOS PESSOA FÍSICA

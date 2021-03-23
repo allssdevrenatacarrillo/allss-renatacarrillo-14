@@ -64,7 +64,24 @@
                 <form string="Dados para Dimensionamento">
                     <group>
                         <group>
-                        <field name="_allss_concessionaria"/>
+                            <field name="_allss_tp_telhado_dimen"/>
+                            <field name="_allss_md_consu_dimen"/>
+                            <field name="_allss_qtd_mes_dimen"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_consu_dimen_1"/>
+                            <field name="_allss_consu_dimen_2"/>
+                            <field name="_allss_consu_dimen_3"/>
+                            <field name="_allss_consu_dimen_4"/>
+                            <field name="_allss_consu_dimen_5"/>
+                            <field name="_allss_consu_dimen_6"/>
+                            <field name="_allss_consu_dimen_7"/>
+                            <field name="_allss_consu_dimen_8"/>
+                            <field name="_allss_consu_dimen_9"/>
+                            <field name="_allss_consu_dimen_10"/>
+                            <field name="_allss_consu_dimen_11"/>
+                            <field name="_allss_consu_dimen_12"/>
                         </group>
                     </group>
                 </form>
