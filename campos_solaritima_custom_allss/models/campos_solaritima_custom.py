@@ -91,7 +91,15 @@ class ResPartnerCustom(models.Model):
     _allss_ficha_financ_4 = fields.Binary("Ficha Financiamento - 4")
     _allss_boleto_financ = fields.Binary("Boletos de Financiamento")
     # GRUPO: PEDIDOS DE COMPRA - NOTAS FISCAIS - BOLETOS
+    _allss_equip_pedido_compra = fields.Binary("Pedido Equipamentos Distribuidor")
+    _allss_nf_equip_pedido_compra = fields.Binary("NF Equipamentos Distribuidor")
+    _allss_bl_equip_pedido_compra = fields.Binary("Boletos Equipamentos Distribuidor")
+    _allss_cp_pag_pedido_compra = fields.Binary("Comprovante de Pagamento Distribuidor")
+    _allss_fix_pedido_compra = fields.Binary("Pedidos Estruturas de Fixação")
+    _allss_nf_fix_pedido_compra = fields.Binary("NF Estruturas de Fixação")
+    _allss_bl_fix_pedido_compra = fields.Binary("Boletos Estruturas de Fixação")
     # GRUPO: PEDIDOS DE VENDA - NOTAS FISCAIS - BOLETOS
+    
     # GRUPO: DADOS DE MONITORAÇÃO
 
     

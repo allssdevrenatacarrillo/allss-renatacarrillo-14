@@ -196,6 +196,26 @@
             </page>
         </page>
 
+        <page name="dados_financ" position="after">
+            <page name="pedido_compra" string="Pedidos de Compra - Notas Fiscais - Boletos">
+                <form string="Pedidos de Compra - Notas Fiscais - Boletos">
+                <group>
+                    <group>
+                        <field name="_allss_equip_pedido_compra"/>
+                        <field name="_allss_nf_equip_pedido_compra"/>
+                        <field name="_allss_bl_equip_pedido_compra"/>
+                        <field name="_allss_cp_pag_pedido_compra"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_fix_pedido_compra"/>
+                        <field name="_allss_nf_fix_pedido_compra"/>
+                        <field name="_allss_bl_fix_pedido_compra"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
 
         </field>
     </record>
