@@ -49,6 +49,27 @@ class ResPartnerCustom(models.Model):
     _allss_consu_dimen_11 = fields.Char("Consumo KWh Mês 11")
     _allss_consu_dimen_12 = fields.Char("Consumo KWh Mês 12")
     # GRUPO: FOTOS DA INSTALAÇÃO
+    _allss_frente_fotos_inst = fields.Binary("RG-CPF-CNH - Frente da Instalação")
+    _allss_verso_fotos_inst = fields.Binary("RG-CPF-CNH - Verso da Instalação")
+    _allss_conta_fotos_inst_1 = fields.Binary("Conta de Luz - 1")
+    _allss_conta_fotos_inst_2 = fields.Binary("Conta de Luz - 2")
+    _allss_conta_fotos_inst_3 = fields.Binary("Conta de Luz - 3")
+    _allss_conta_fotos_inst_4 = fields.Binary("Conta de Luz - 4")
+    _allss_fachada_fotos_inst = fields.Binary("Fachada")
+    _allss_telhado_fotos_inst = fields.Binary("Foto do Telhado")
+    _allss_poste_fotos_inst = fields.Binary("Poste da Concessionária")
+    _allss_medidor_fotos_inst = fields.Binary("Medidor da Concessionária")
+    _allss_disjuntor_fotos_inst = fields.Binary("Foto do Disjuntor")
+    _allss_quadro_fotos_inst = fields.Binary("Quadro de Distribuição")
+    _allss_transformador_fotos_inst = fields.Binary("Foto Transformador Concessionária")
+    _allss_paines_fotos_inst = fields.Binary("Painés Solares Instalados")
+    _allss_inversores_fotos_inst = fields.Binary("Inversores Instalados")
+    _allss_dps_fotos_inst = fields.Binary("Disjuntor e DPS Fotovoltaico")
+    _allss_placa_fotos_inst_1 = fields.Binary("Placa de Advertência - 1")
+    _allss_placa_fotos_inst_2 = fields.Binary("Placa de Advertência - 2")
+    _allss_medidor_fotos_inst = fields.Binary("Medidor Bidirecional Trocado")
+    _allss_checklist_fotos_inst = fields.Binary("Checklist de Instalação")
+    _allss_relatorio_fotos_inst = fields.Binary("Relatório de Instalação")
     # GRUPO: DOCUMENTOS DE PROJETO CONCESSIONÁRIA
     # GRUPO: FOTOS DOCUMENTOS PESSOA FÍSICA
     # GRUPO: DADOS DE FINANCIAMENTO

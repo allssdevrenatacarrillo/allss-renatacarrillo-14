@@ -60,7 +60,7 @@
         </page>
 
         <page name="dados_instalacao" position="after">
-            <page string="Dados para Dimensionamento">
+            <page name="dados_dimensionamento" string="Dados para Dimensionamento">
                 <form string="Dados para Dimensionamento">
                     <group>
                         <group>
@@ -82,6 +82,53 @@
                             <field name="_allss_consu_dimen_10"/>
                             <field name="_allss_consu_dimen_11"/>
                             <field name="_allss_consu_dimen_12"/>
+                        </group>
+                    </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="dados_dimensionamento" position="after">
+            <page name="fotos_instalacao" string="Fotos da Instalação">
+                <form string="Fotos da Instalação">
+                    <group>
+                        <group>
+                            <field name="_allss_frente_fotos_inst"/>
+                            <field name="_allss_verso_fotos_inst"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_conta_fotos_inst_1"/>
+                            <field name="_allss_conta_fotos_inst_2"/>
+                            <field name="_allss_conta_fotos_inst_3"/>
+                            <field name="_allss_conta_fotos_inst_4"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_fachada_fotos_inst"/>
+                            <field name="_allss_telhado_fotos_inst"/>
+                            <field name="_allss_poste_fotos_inst"/>
+                            <field name="_allss_medidor_fotos_inst"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_disjuntor_fotos_inst"/>
+                            <field name="_allss_quadro_fotos_inst"/>
+                            <field name="_allss_transformador_fotos_inst"/>
+                            <field name="_allss_paines_fotos_inst"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_inversores_fotos_inst"/>
+                            <field name="_allss_dps_fotos_inst"/>
+                            <field name="_allss_placa_fotos_inst_1"/>
+                            <field name="_allss_placa_fotos_inst_2"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_medidor_fotos_inst"/>
+                            <field name="_allss_checklist_fotos_inst"/>
+                            <field name="_allss_relatorio_fotos_inst"/>
                         </group>
                     </group>
                 </form>
