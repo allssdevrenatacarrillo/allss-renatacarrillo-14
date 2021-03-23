@@ -80,8 +80,12 @@ class ResPartnerCustom(models.Model):
     _allss_anexo_doc_proj_5 = fields.Binary("Anexo - 5")
     _allss_parecer_doc_proj = fields.Binary("Parecer de Acesso")
     # GRUPO: FOTOS DOCUMENTOS PESSOA FÍSICA
-    
+    _allss_frente_doc_pessoa_fisica = fields.Binary("RG-CPF-CNH - Frente")
+    _allss_verso_doc_pessoa_fisica = fields.Binary("RG-CPF-CNH - Verso")
+    _allss_vend_doc_pessoa_fisica = fields.Binary("Comprovante de Venda")
+    _allss_ender_doc_pessoa_fisica = fields.Binary("Comprovante Endereço")
     # GRUPO: DADOS DE FINANCIAMENTO
+    
     # GRUPO: PEDIDOS DE COMPRA - NOTAS FISCAIS - BOLETOS
     # GRUPO: PEDIDOS DE VENDA - NOTAS FISCAIS - BOLETOS
     # GRUPO: DADOS DE MONITORAÇÃO

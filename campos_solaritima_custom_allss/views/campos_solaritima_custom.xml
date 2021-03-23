@@ -159,6 +159,23 @@
             </page>
         </page>
 
+        <page name="doc_projeto_concessionaria" position="after">
+            <page name="fotos_doc_pessoa_fisica" string="Fotos Documentos Pessoa Física">
+                <form string="Fotos Documentos Pessoa Física">
+                <group>
+                    <group>
+                        <field name="_allss_frente_doc_pessoa_fisica"/>
+                        <field name="_allss_verso_doc_pessoa_fisica"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_vend_doc_pessoa_fisica"/>
+                        <field name="_allss_ender_doc_pessoa_fisica"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
 
 
         </field>
