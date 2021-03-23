@@ -99,7 +99,15 @@ class ResPartnerCustom(models.Model):
     _allss_nf_fix_pedido_compra = fields.Binary("NF Estruturas de Fixação")
     _allss_bl_fix_pedido_compra = fields.Binary("Boletos Estruturas de Fixação")
     # GRUPO: PEDIDOS DE VENDA - NOTAS FISCAIS - BOLETOS
-    
+    _allss_proposta_pedido_venda_1 = fields.Binary("Proposta SOLARITIMA Assinada - 1")
+    _allss_proposta_pedido_venda_2 = fields.Binary("Proposta SOLARITIMA Assinada - 2")
+    _allss_proposta_pedido_venda_3 = fields.Binary("Proposta SOLARITIMA Assinada - 3")
+    _allss_proposta_pedido_venda_4 = fields.Binary("Proposta SOLARITIMA Assinada - 4")
+    _allss_nf_servicos_pedido_venda = fields.Binary("NF Serviços SOLARITIMA")
+    _allss_bl_servicos_pedido_venda = fields.Binary("Boletos Serviços SOLARITIMA")
     # GRUPO: DADOS DE MONITORAÇÃO
+    _allss_url_monitoracao = fields.Char("URL de Monitoração")
+    _allss_login_monitoracao = fields.Char("Login de Monitoração")
+    _allss_senha_monitoracao = fields.Char("Senha de Monitoração")
 
     

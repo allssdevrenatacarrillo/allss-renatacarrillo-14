@@ -217,6 +217,40 @@
             </page>
         </page>
 
+        <page name="pedido_compra" position="after">
+            <page name="pedido_venda" string="Pedidos de Vendas - Notas Fiscais - Boletos">
+                <form string="Pedidos de Vendas - Notas Fiscais - Boletos">
+                <group>
+                    <group>
+                        <field name="_allss_proposta_pedido_venda_1"/>
+                        <field name="_allss_proposta_pedido_venda_2"/>
+                        <field name="_allss_proposta_pedido_venda_3"/>
+                        <field name="_allss_proposta_pedido_venda_4"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_nf_servicos_pedido_venda"/>
+                        <field name="_allss_bl_servicos_pedido_venda"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="pedido_venda" position="after">
+            <page name="dados_monit" string="Dados de Monitoração">
+                <form string="Dados de Monitoração">
+                <group>
+                    <group>
+                        <field name="_allss_url_monitoracao"/>
+                        <field name="_allss_login_monitoracao"/>
+                        <field name="_allss_senha_monitoracao"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
         </field>
     </record>
 </data>
