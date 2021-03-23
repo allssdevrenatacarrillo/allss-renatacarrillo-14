@@ -71,7 +71,16 @@ class ResPartnerCustom(models.Model):
     _allss_checklist_fotos_inst = fields.Binary("Checklist de Instalação")
     _allss_relatorio_fotos_inst = fields.Binary("Relatório de Instalação")
     # GRUPO: DOCUMENTOS DE PROJETO CONCESSIONÁRIA
+    _allss_crea_doc_proj = fields.Binary("ART CREA")
+    _allss_unifilar_doc_proj = fields.Binary("Diagrama Unifilar")
+    _allss_anexo_doc_proj_1 = fields.Binary("Anexo - 1")
+    _allss_anexo_doc_proj_2 = fields.Binary("Anexo - 2")
+    _allss_anexo_doc_proj_3 = fields.Binary("Anexo - 3")
+    _allss_anexo_doc_proj_4 = fields.Binary("Anexo - 4")
+    _allss_anexo_doc_proj_5 = fields.Binary("Anexo - 5")
+    _allss_parecer_doc_proj = fields.Binary("Parecer de Acesso")
     # GRUPO: FOTOS DOCUMENTOS PESSOA FÍSICA
+    
     # GRUPO: DADOS DE FINANCIAMENTO
     # GRUPO: PEDIDOS DE COMPRA - NOTAS FISCAIS - BOLETOS
     # GRUPO: PEDIDOS DE VENDA - NOTAS FISCAIS - BOLETOS

@@ -135,6 +135,29 @@
             </page>
         </page>
 
+        <page name="fotos_instalacao" position="after">
+            <page name="doc_projeto_concessionaria" string="Documentos de Projeto Concessionária">
+                <form string="Documentos de Projeto Concessionária">
+                <group>
+                    <group>
+                        <field name="_allss_crea_doc_proj"/>
+                        <field name="_allss_unifilar_doc_proj"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_anexo_doc_proj_1"/>
+                        <field name="_allss_anexo_doc_proj_2"/>
+                        <field name="_allss_anexo_doc_proj_3"/>
+                        <field name="_allss_anexo_doc_proj_4"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_parecer_doc_proj"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
 
 
 
