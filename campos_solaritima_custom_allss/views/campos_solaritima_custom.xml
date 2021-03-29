@@ -248,11 +248,6 @@
                 </form>
             </page>
         </page>
-
-        <xpath expr="//page[2]" position="attributes">
-            <attribute name="string">Novo nome</attribute>
-        </xpath>
-
         </field>
     </record>
 </data>
