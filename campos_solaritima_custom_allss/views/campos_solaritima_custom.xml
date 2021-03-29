@@ -249,10 +249,10 @@
             </page>
         </page>
 
-        <xpath expr="//page[@name='public']/page[1]" position="attributes">
+        <xpath expr="//page[2]" position="attributes">
             <attribute name="string">Novo nome</attribute>
         </xpath>
-        
+
         </field>
     </record>
 </data>
