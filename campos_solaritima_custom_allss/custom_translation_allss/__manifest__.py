@@ -3,17 +3,17 @@
     'name': 'Translation ALLSS',
     'version': '14.0.0.0.0',
     'licence': 'AGPL-3',
-    'category': '',
+    'category': 'Translate',
     'author': 'Renata (ALLSS Soluções em Sistemas)',
     'summary': '',
     'description':'Translation',
-    'depends': [
-        'planning',
-        'base'
-    ],
-    'data': [
-        #views
-    ],
+    # 'depends': [
+    #     'planning',
+    #     'base'
+    # ],
+    # 'data': [
+    #     #views
+    # ],
     'demo': [
     ],
     'css': [],
