@@ -1082,7 +1082,7 @@ msgstr ""
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_action_schedule_by_employee
 msgid "Schedule by Employee"
-msgstr "Programação por funcionário"
+msgstr ""
 
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_action_schedule_by_role
