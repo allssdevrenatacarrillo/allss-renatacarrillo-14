@@ -8,7 +8,8 @@
     'summary': '',
     'description':'Translation',
     'depends': [
-        'base'
+        'base',
+        'planning'
     ],
     'data': [
         #views
