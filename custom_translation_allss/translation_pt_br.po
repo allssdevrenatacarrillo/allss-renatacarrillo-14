@@ -1,3 +1,20 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* planning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-04-13 19:01+0000\n"
+"PO-Revision-Date: 2021-04-13 19:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
 #. module: planning
 #: model:mail.template,subject:planning.email_template_slot_single
 msgid "${ctx.mail_subject}"
@@ -7,12 +24,12 @@ msgstr ""
 #: code:addons/planning/models/planning_template.py:0
 #, python-format
 msgid "(%s days span)"
-msgstr ""
+msgstr "(%s days span)"
 
 #. module: planning
 #: model_terms:digest.tip,tip_description:planning.digest_tip_planning_0
 msgid "<b class=\"tip_title\">Tip: Record your planning faster</b>"
-msgstr ""
+msgstr "<b class=\"tip_title\">Dica: registre seu planejamento com mais rapidez</b>"
 
 #. module: planning
 #: model:mail.template,body_html:planning.email_template_planning_planning
@@ -62,6 +79,50 @@ msgid ""
 "                </div>\n"
 "            "
 msgstr ""
+"<div>\n"
+"                    <p>\n"
+"                    % if ctx.get('employee'):\n"
+"                        Dear ${ctx['employee'].name},\n"
+"                    % else:\n"
+"                        Olá,\n"
+"                    % endif\n"
+"                        <br/><br/>\n"
+"                    % if ctx.get('assigned_new_shift'):\n"
+"                        Você recebeu novos turnos:\n"
+"                    % else:\n"
+"                        Por favor, encontre seu planejamento para o seguinte período:\n"
+"                    % endif\n"
+"                    </p>\n"
+"                    <br/>\n"
+"\n"
+"                    <table style=\"table-layout: fixed; width: 80%; margin: auto;\">\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">From</th>\n"
+"                            <td style=\"padding: 5px;\">${format_date(ctx.get('start_datetime'))}</td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">To</th>\n"
+"                            <td style=\"padding: 5px;\">${format_date(ctx.get('end_datetime'))}</td>\n"
+"                        </tr>\n"
+"                    </table>\n"
+"\n"
+"                    % if ctx.get('planning_url'):\n"
+"                        <div style=\"margin: 15px;\">\n"
+"                            <a href=\"${ctx.get('planning_url')}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Veja o seu planejamento</a>\n"
+"                        </div>\n"
+"                    % endif\n"
+"\n"
+"                    % if ctx.get('slot_unassigned_count'):\n"
+"                    <div>\n"
+"                        <p>Existem novos turnos abertos disponíveis. Por favor, atribua a si mesmo se você estiver disponível.</p>\n"
+"                    </div>\n"
+"                    % endif\n"
+"\n"
+"                    % if ctx.get('message'):\n"
+"                        <p>${ctx['message']}</p>\n"
+"                    % endif\n"
+"                </div>\n"
+"            "
 
 #. module: planning
 #: model:mail.template,body_html:planning.email_template_slot_single
@@ -134,6 +195,73 @@ msgid ""
 "                </div>\n"
 "            "
 msgstr ""
+"<div>\n"
+"                    <p>Dear ${ctx.employee_name or ''},<br/><br/></p>\n"
+"                    % if ctx.get('open_shift_available')\n"
+"                    <p>Um novo turno aberto está disponível:</p>\n"
+"                    % else\n"
+"                    <p>Você recebeu a seguinte programação:</p>\n"
+"                    % endif\n"
+"                    <br/>\n"
+"                    <table style=\"table-layout: fixed; width: 80%; margin: auto;\">\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">De</th>\n"
+"                            <td style=\"padding: 5px;\">${ctx.get('start_datetime')}</td>\n"
+"                        </tr>\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">Para</th>\n"
+"                            <td style=\"padding: 5px;\">${ctx.get('end_datetime')}</td>\n"
+"                        </tr>\n"
+"                        % if object.role_id\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">Função</th>\n"
+"                            <td style=\"padding: 5px;\">${object.role_id.name or ''}</td>\n"
+"                        </tr>\n"
+"                        % endif\n"
+"                        % if object.project_id\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">Projeto</th>\n"
+"                            <td style=\"padding: 5px;\">${object.project_id.name or ''}</td>\n"
+"                        </tr>\n"
+"                        % endif\n"
+"                        % if object.task_id\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">Tarefa</th>\n"
+"                            <td style=\"padding: 5px;\">${object.task_id.name or ''}</td>\n"
+"                        </tr>\n"
+"                        % endif\n"
+"                        % if object.name\n"
+"                        <tr>\n"
+"                            <th style=\"padding: 5px;text-align: left; width: 15%;\">Observação</th>\n"
+"                            <td style=\"padding: 5px;\">${object.name or ''}</td>\n"
+"                        </tr>\n"
+"                        % endif\n"
+"                    </table>\n"
+"                    % if ctx.get('available_link')\n"
+"                    <div>\n"
+"                        <br/>\n"
+"                        <span>Please, assign yourself if you are available.</span>\n"
+"                    </div>\n"
+"                    % endif\n"
+"                    <div style=\"text-align: center\">\n"
+"                        % if ctx.get('unavailable_link')\n"
+"                        <div style=\"display: inline-block; margin: 15px; text-align: center\">\n"
+"                            <a href=\"${ctx.unavailable_link}\" target=\"_blank\" style=\"padding: 5px 10px; color: #875A7B; text-decoration: none; background-color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 3px\">Estou indisponível</a>\n"
+"                        </div>\n"
+"                        % endif\n"
+"                        % if ctx.get('available_link')\n"
+"                        <div style=\"display: inline-block; margin: 15px; text-align: center\">\n"
+"                            <a href=\"${ctx.available_link}\" target=\"_blank\" style=\"padding: 5px 10px; color: #875A7B; text-decoration: none; background-color: #FFFFFF; border: 1px solid #FFFFFF; border-radius: 3px\">Atribua-me este turno</a>\n"
+"                        </div>\n"
+"                        % endif\n"
+"                        % if ctx.get('link')\n"
+"                        <div style=\"display: inline-block; margin: 15px; text-align: center\">\n"
+"                            <a href=\"${ctx.link}\" target=\"_blank\" style=\"padding: 5px 10px; color: #FFFFFF; text-decoration: none; background-color: #875A7B; border: 1px solid #875A7B; border-radius: 3px\">Ver o planejamento</a>\n"
+"                        </div>\n"
+"                        % endif\n"
+"                    </div>\n"
+"                </div>\n"
+"            "
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_shift_notification
@@ -370,7 +498,7 @@ msgstr ""
 #: code:addons/planning/static/src/xml/planning_gantt.xml:0
 #, python-format
 msgid "Copy previous week"
-msgstr "Copiar semana anterior"
+msgstr ""
 
 #. module: planning
 #: model_terms:ir.actions.act_window,help:planning.planning_report_action_analysis
@@ -395,7 +523,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:planning.field_planning_slot_template__create_uid
 #: model:ir.model.fields,field_description:planning.field_slot_planning_select_send__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Criado por"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_planning__create_date
@@ -1070,58 +1198,58 @@ msgstr "Guardar como modelo"
 #: code:addons/planning/static/src/js/tours/planning.js:0
 #, python-format
 msgid "Save this shift once it is ready."
-msgstr ""
+msgstr "Salve este turno quando estiver pronto."
 
 #. module: planning
 #: model:ir.model,name:planning.model_planning_planning
 #: model:ir.ui.menu,name:planning.planning_menu_schedule
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_gantt
 msgid "Schedule"
-msgstr ""
+msgstr "Cronograma"
 
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_action_schedule_by_employee
 msgid "Schedule by Employee"
-msgstr ""
+msgstr "Programação por funcionário"
 
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_action_schedule_by_role
 msgid "Schedule by Role"
-msgstr ""
+msgstr "Programação por função"
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_hr_employee__employee_token
 #: model:ir.model.fields,field_description:planning.field_planning_planning__access_token
 #: model:ir.model.fields,field_description:planning.field_planning_slot__access_token
 msgid "Security Token"
-msgstr ""
+msgstr "Token de segurança"
 
 #. module: planning
 #: model:ir.model,name:planning.model_slot_planning_select_send
 msgid "Select Employees and Send One Slot"
-msgstr ""
+msgstr "Selecione funcionários e envie um slot"
 
 #. module: planning
 #: code:addons/planning/wizard/planning_send.py:0
 #, python-format
 msgid "Select the employees you would like to send the planning to."
-msgstr ""
+msgstr "Selecione os funcionários para os quais deseja enviar o planejamento."
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form_in_gantt
 #: model_terms:ir.ui.view,arch_db:planning.slot_planning_select_send_view_form
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #. module: planning
 #: model:ir.model,name:planning.model_planning_send
 msgid "Send Planning"
-msgstr ""
+msgstr "Enviar planejamento"
 
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_send_action
 msgid "Send Planning By Email"
-msgstr ""
+msgstr "Enviar planejamento por e-mail"
 
 #. module: planning
 #. openerp-web
@@ -1129,39 +1257,39 @@ msgstr ""
 #: code:addons/planning/static/src/xml/planning_gantt.xml:0
 #, python-format
 msgid "Send schedule"
-msgstr ""
+msgstr "Enviar programação"
 
 #. module: planning
 #. openerp-web
 #: code:addons/planning/static/src/js/tours/planning.js:0
 #, python-format
 msgid "Send the schedule and mark the shifts as published. Congratulations!"
-msgstr ""
+msgstr "Envie a programação e marque os turnos como publicados. Parabéns!"
 
 #. module: planning
 #. openerp-web
 #: code:addons/planning/static/src/js/tours/planning.js:0
 #, python-format
 msgid "Send the schedule to your employees once it is ready."
-msgstr ""
+msgstr "Envie a programação aos seus funcionários assim que estiver pronta."
 
 #. module: planning
 #: model:ir.model.fields,field_description:planning.field_planning_role__sequence
 msgid "Sequence"
-msgstr ""
+msgstr "Sequência"
 
 #. module: planning
 #: model:ir.actions.act_window,name:planning.planning_action_settings
 #: model:ir.ui.menu,name:planning.planning_menu_settings_config
 msgid "Settings"
-msgstr ""
+msgstr "Definições"
 
 #. module: planning
 #: code:addons/planning/controllers/main.py:0
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_form
 #, python-format
 msgid "Shift"
-msgstr ""
+msgstr "Mudança"
 
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.planning_view_tree
@@ -1427,4 +1555,4 @@ msgstr ""
 #. module: planning
 #: model_terms:ir.ui.view,arch_db:planning.period_report_template
 msgid "to"
-msgstr ""
+msgstr "para"
