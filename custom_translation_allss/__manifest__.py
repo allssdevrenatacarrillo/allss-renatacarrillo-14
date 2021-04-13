@@ -13,6 +13,7 @@
     ],
     'data': [
         #views
+        'planning_view_gantt'
     ],
     'demo': [
     ],
