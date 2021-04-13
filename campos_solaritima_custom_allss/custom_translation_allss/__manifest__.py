@@ -7,13 +7,12 @@
     'author': 'Renata (ALLSS Soluções em Sistemas)',
     'summary': '',
     'description':'Translation',
-    # 'depends': [
-    #     'planning',
-    #     'base'
-    # ],
-    # 'data': [
-    #     #views
-    # ],
+    'depends': [
+        'base'
+    ],
+    'data': [
+        #views
+    ],
     'demo': [
     ],
     'css': [],
