@@ -14,6 +14,17 @@
             <field name="_allss_cod_mun_ibge"/>
             <field name="_allss_coord"/>
         </xpath>
+
+        <!-- Renomeando "Casa" para "Nº" -->
+        <xpath expr="//field[@name='street_number']" position="attributes">
+            <attribute name='string'>Nº</attribute>
+        </xpath>
+
+        <!-- Renomeando "Porta" para "2º Nº" -->
+        <xpath expr="//field[@name='street_number2']" position="replace">
+            <attribute name='string'>2º Nº</attribute>
+        </xpath>
+
         </field>
     </record>
 </data>
