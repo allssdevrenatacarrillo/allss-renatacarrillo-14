@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Campos Adicionais ALLSS',
-    'version': '14.0.1.0.0',
+    'version': '12.0.1.0.0',
     'licence': 'AGPL-3',
     'category': 'Partner',
     'author': 'Renata Carrillo (ALLSS Soluções em Sistemas)',
