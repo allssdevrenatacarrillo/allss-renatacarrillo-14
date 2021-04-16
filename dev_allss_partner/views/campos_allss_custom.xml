@@ -8,7 +8,7 @@
 
         <field name="country_id" position="after">
             <field name="_allss_num_1" placeholder="Nº"/>
-            <!-- <field name="_allss_numb_2" placeholder="2º Nº"/> -->
+            <field name="_allss_numb_2" placeholder="2º Nº"/>
             <field name="_allss_bairro" placeholder="Bairro"/>
             <field name="_allss_cod_mun_ibge" placeholder="Cód Municipal IBGE"/>
         </field>
