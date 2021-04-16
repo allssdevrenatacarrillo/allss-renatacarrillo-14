@@ -18,10 +18,11 @@
             <field name="_allss_contrib"/>
         </xpath>
 
-        <xpath expr="//page[2]/group[1]/group[2]" position="after">
-        <field name="user_id" position="after">
-            <field name="_allss_coordenador"/>
-        </field>
+        <!-- <xpath expr="//page[2]/group[1]/group[2]" position="after"> -->
+        <xpath expr="//group[@name='sale']" position="after">
+            <group string="Coordenação" name="infCoord">
+                <field name="_allss_coordenador"/>
+            </group>
         </xpath>
 
         <!-- Renomeando "Casa" para "Nº" -->
