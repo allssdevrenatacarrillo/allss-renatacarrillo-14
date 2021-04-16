@@ -20,7 +20,7 @@
         </xpath>
 
         <!-- Renomeando "Porta" para "2º Nº" -->
-        <xpath expr="//field[@name='street_number2']" position="replace">
+        <xpath expr="//field[@name='street_number2']" position="attributes">
             <attribute name='string'>2º Nº</attribute>
         </xpath>
 
