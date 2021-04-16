@@ -14,6 +14,6 @@ class ResPartnerCustom(models.Model):
     _allss_contrib = fields.Selection([('sim', 'Sim'), ('não', 'Não')], string="Contribuinte?")
     _allss_bairro = fields.Char("Bairro")
     _allss_cod_mun_ibge = fields.Char("Cód. Município do IBGE")
-    _allss_numb_1 = fields.Char("Nº")
+    _allss_num_1 = fields.Char("Nº")
     _allss_numb_2 = fields.Char("2º Nº")
     _allss_coordenador = fields.Char("Coordenador")
