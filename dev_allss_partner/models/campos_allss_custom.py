@@ -13,4 +13,4 @@ class ResPartnerCustom(models.Model):
     _allss_contrib = fields.Boolean("Contribuinte")
     _allss_bairro = fields.Char("Bairro")
     _allss_cod_mun_ibge = fields.Char("Cód. Município do IBGE")
-    # _allss_coord = fields.Many2many("Coordenador")
+    _allss_coord = fields.Char("Coordenador")

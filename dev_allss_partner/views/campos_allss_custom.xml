@@ -13,8 +13,7 @@
             <field name="_allss_insc_est"/>
             <field name="_allss_cnae"/>
             <field name="_allss_contrib"/>
-            <!-- <field name="_allss_coord"/> -->
-            
+
         <!-- Renomeando "Casa" para "Nº" -->
         <xpath expr="//field[@name='street']" position="attributes">
             <attribute name='string'>Nº</attribute>
@@ -24,6 +23,10 @@
         <!-- <xpath expr="//field[@name='street_number2']" position="attributes">
             <attribute name='string'>2º Nº</attribute>
         </xpath> -->
+
+        <xpath expr="//field[@name='user_id']" position="after">
+            <field name="_allss_coord"/>
+        </xpath>
 
         </field>
     </record>
