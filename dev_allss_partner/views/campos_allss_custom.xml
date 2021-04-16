@@ -22,8 +22,9 @@
             <field name="_allss_coordenador"/>
         </field>
 
-        <xpath expr="//page[2]/group[1]/group[2]" position="after">
-                <field name="_allss_coordenador"/>
+        <!-- <xpath expr="//page[2]/group[1]/group[2]" position="after"> -->
+        <xpath expr="//field[@name='user_id']" position="after">
+            <field name="_allss_coordenador"/>
         </xpath>
 
         <!-- Renomeando "Casa" para "Nº" -->
