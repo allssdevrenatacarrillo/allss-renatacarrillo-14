@@ -5,18 +5,19 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml"> 
-        <xpath expr="//field[@name='vat']" position="after">
+        <xpath expr="//field[@name='street2']" position="after">
+            <field name="_allss_bairro"/>
+            <field name="_allss_cod_mun_ibge"/>
+        </xpath>
             <field name="_allss_cnpj"/>
             <field name="_allss_insc_est"/>
             <field name="_allss_cnae"/>
             <field name="_allss_contrib"/>
-            <field name="_allss_bairro"/>
-            <field name="_allss_cod_mun_ibge"/>
             <!-- <field name="_allss_coord"/> -->
-        </xpath>
+            
         <!-- Renomeando "Casa" para "Nº" -->
         <xpath expr="//field[@name='street']" position="attributes">
-            <attribute label='string'>Nº</attribute>
+            <attribute name='string'>Nº</attribute>
         </xpath>
 
         <!-- Renomeando "Porta" para "2º Nº" -->
