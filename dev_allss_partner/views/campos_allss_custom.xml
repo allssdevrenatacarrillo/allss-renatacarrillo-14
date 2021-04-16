@@ -16,10 +16,11 @@
             <field name="_allss_insc_est"/>
             <field name="_allss_cnae"/>
             <field name="_allss_contrib"/>
+            <field name="_allss_coordenador"/>
         </xpath>
 
         <field name="user_id" position="after">
-            <field name="_allss_coord"/>
+            <field name="_allss_coordenador"/>
         </field>
 
         <!-- Renomeando "Casa" para "Nº" -->
