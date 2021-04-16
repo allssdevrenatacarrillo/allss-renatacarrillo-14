@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <record id="campos_allss_custom" model="ir.ui.view">
+        <field name="name">Campos Adicionais ALLSS</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml"> 
+        <xpath expr="//field[@name='vat']" position="after">
+            <field name="_allss_fornecedor"/>
+            <field name="_allss_titular_inst"/>
+            <!-- <field name="_allss_nome"/> -->
+            <field name="_allss_cpf"/>
+            <field name="_allss_cnpj"/>
+            <field name="_allss_gps"/>
+            <field name="_allss_respon"/>
+            <field name="_allss_met_pag"/>
+            <field name="_allss_origem"/>
+        </xpath>
+        <page name="internal_notes" position="after">
+            <page name="dados_instalacao" string="Dados da Instalação">
+                <form string="Dados da Instalação">
+                <group>
+                    <group>
+                        <field name="_allss_concessionaria"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_nome_titular_inst"/>
+                        <field name="_allss_sobr_titular_inst"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_cpf_inst"/>
+                        <field name="_allss_cnpj_inst"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_end_inst"/>
+                        <field name="_allss_city_inst"/>
+                        <field name="_allss_est_inst"/>
+                        <field name="_allss_cep_inst"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_tp_estab_inst"/>
+                        <field name="_allss_unid_consum_inst"/>
+                        <field name="_allss_class_inst"/>
+                        <field name="_allss_gps_inst"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_obs_inst"/>
+                    </group>
+
+                </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="dados_instalacao" position="after">
+            <page name="dados_dimensionamento" string="Dados para Dimensionamento">
+                <form string="Dados para Dimensionamento">
+                    <group>
+                        <group>
+                            <field name="_allss_tp_telhado_dimen"/>
+                            <field name="_allss_md_consu_dimen"/>
+                            <field name="_allss_qtd_mes_dimen"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_consu_dimen_1"/>
+                            <field name="_allss_consu_dimen_2"/>
+                            <field name="_allss_consu_dimen_3"/>
+                            <field name="_allss_consu_dimen_4"/>
+                            <field name="_allss_consu_dimen_5"/>
+                            <field name="_allss_consu_dimen_6"/>
+                            <field name="_allss_consu_dimen_7"/>
+                            <field name="_allss_consu_dimen_8"/>
+                            <field name="_allss_consu_dimen_9"/>
+                            <field name="_allss_consu_dimen_10"/>
+                            <field name="_allss_consu_dimen_11"/>
+                            <field name="_allss_consu_dimen_12"/>
+                        </group>
+                    </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="dados_dimensionamento" position="after">
+            <page name="fotos_instalacao" string="Fotos da Instalação">
+                <form string="Fotos da Instalação">
+                    <group>
+                        <group>
+                            <field name="_allss_frente_fotos_inst"/>
+                            <field name="_allss_verso_fotos_inst"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_conta_fotos_inst_1"/>
+                            <field name="_allss_conta_fotos_inst_2"/>
+                            <field name="_allss_conta_fotos_inst_3"/>
+                            <field name="_allss_conta_fotos_inst_4"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_fachada_fotos_inst"/>
+                            <field name="_allss_telhado_fotos_inst"/>
+                            <field name="_allss_poste_fotos_inst"/>
+                            <field name="_allss_medidor_fotos_inst"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_disjuntor_fotos_inst"/>
+                            <field name="_allss_quadro_fotos_inst"/>
+                            <field name="_allss_transformador_fotos_inst"/>
+                            <field name="_allss_paines_fotos_inst"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_inversores_fotos_inst"/>
+                            <field name="_allss_dps_fotos_inst"/>
+                            <field name="_allss_placa_fotos_inst_1"/>
+                            <field name="_allss_placa_fotos_inst_2"/>
+                        </group>
+
+                        <group>
+                            <field name="_allss_medidor_fotos_inst"/>
+                            <field name="_allss_checklist_fotos_inst"/>
+                            <field name="_allss_relatorio_fotos_inst"/>
+                        </group>
+                    </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="fotos_instalacao" position="after">
+            <page name="doc_projeto_concessionaria" string="Documentos de Projeto Concessionária">
+                <form string="Documentos de Projeto Concessionária">
+                <group>
+                    <group>
+                        <field name="_allss_crea_doc_proj"/>
+                        <field name="_allss_unifilar_doc_proj"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_anexo_doc_proj_1"/>
+                        <field name="_allss_anexo_doc_proj_2"/>
+                        <field name="_allss_anexo_doc_proj_3"/>
+                        <field name="_allss_anexo_doc_proj_4"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_parecer_doc_proj"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="doc_projeto_concessionaria" position="after">
+            <page name="fotos_doc_pessoa_fisica" string="Fotos Documentos Pessoa Física">
+                <form string="Fotos Documentos Pessoa Física">
+                <group>
+                    <group>
+                        <field name="_allss_frente_doc_pessoa_fisica"/>
+                        <field name="_allss_verso_doc_pessoa_fisica"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_vend_doc_pessoa_fisica"/>
+                        <field name="_allss_ender_doc_pessoa_fisica"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="fotos_doc_pessoa_fisica" position="after">
+            <page name="dados_financ" string="Dados de Financiamento">
+                <form string="Dados de Financiamento">
+                <group>
+                    <group>
+                        <field name="_allss_ficha_financ_1"/>
+                        <field name="_allss_ficha_financ_2"/>
+                        <field name="_allss_ficha_financ_3"/>
+                        <field name="_allss_ficha_financ_4"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_boleto_financ"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="dados_financ" position="after">
+            <page name="pedido_compra" string="Pedidos de Compra - Notas Fiscais - Boletos">
+                <form string="Pedidos de Compra - Notas Fiscais - Boletos">
+                <group>
+                    <group>
+                        <field name="_allss_equip_pedido_compra"/>
+                        <field name="_allss_nf_equip_pedido_compra"/>
+                        <field name="_allss_bl_equip_pedido_compra"/>
+                        <field name="_allss_cp_pag_pedido_compra"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_fix_pedido_compra"/>
+                        <field name="_allss_nf_fix_pedido_compra"/>
+                        <field name="_allss_bl_fix_pedido_compra"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="pedido_compra" position="after">
+            <page name="pedido_venda" string="Pedidos de Vendas - Notas Fiscais - Boletos">
+                <form string="Pedidos de Vendas - Notas Fiscais - Boletos">
+                <group>
+                    <group>
+                        <field name="_allss_proposta_pedido_venda_1"/>
+                        <field name="_allss_proposta_pedido_venda_2"/>
+                        <field name="_allss_proposta_pedido_venda_3"/>
+                        <field name="_allss_proposta_pedido_venda_4"/>
+                    </group>
+
+                    <group>
+                        <field name="_allss_nf_servicos_pedido_venda"/>
+                        <field name="_allss_bl_servicos_pedido_venda"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+
+        <page name="pedido_venda" position="after">
+            <page name="dados_monit" string="Dados de Monitoração">
+                <form string="Dados de Monitoração">
+                <group>
+                    <group>
+                        <field name="_allss_url_monitoracao"/>
+                        <field name="_allss_login_monitoracao"/>
+                        <field name="_allss_senha_monitoracao"/>
+                    </group>
+                </group>
+                </form>
+            </page>
+        </page>
+        </field>
+    </record>
+</data>
