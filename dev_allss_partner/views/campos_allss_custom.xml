@@ -15,14 +15,14 @@
             <field name="_allss_coord"/>
         </xpath>
         <!-- Renomeando "Casa" para "Nº" -->
-        <xpath expr="//label[@name='street_number']" position="attributes">
-            <attribute name='label'>Nº</attribute>
-        </xpath>
+        <!-- <xpath expr="//field[@name='street_number']" position="attributes">
+            <attribute name='string'>Nº</attribute>
+        </xpath> -->
 
         <!-- Renomeando "Porta" para "2º Nº" -->
-        <xpath expr="//label[@name='street_number2']" position="attributes">
-            <attribute name='label'>2º Nº</attribute>
-        </xpath>
+        <!-- <xpath expr="//field[@name='street_number2']" position="attributes">
+            <attribute name='string'>2º Nº</attribute>
+        </xpath> -->
 
         </field>
     </record>
