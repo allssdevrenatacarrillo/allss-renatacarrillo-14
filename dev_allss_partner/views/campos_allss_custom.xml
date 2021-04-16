@@ -15,7 +15,7 @@
             <!-- <field name="_allss_coord"/> -->
         </xpath>
         <!-- Renomeando "Casa" para "Nº" -->
-        <xpath expr="//label[@name='street']" position="attributes">
+        <xpath expr="//field[@label='street']" position="attributes">
             <attribute name='label'>Nº</attribute>
         </xpath>
 
