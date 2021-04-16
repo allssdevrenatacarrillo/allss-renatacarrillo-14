@@ -8,7 +8,33 @@ class ResPartnerCustom(models.Model):
 
     currency_id = fields.Many2one("res.currency", related="company_id.currency_id")
     # GRUPO: CLIENTE
-    _allss_fornecedor = fields.Char("Fornecedor")
+    _allss_cnpj = fields.Char("CNPJ")
+    _allss_insc_est = fields.Char("Inscrição Estadual")
+    _allss_cnae = fields.Char("CNAE")
+    _allss_contrib = fields.Selection("Contribuinte" selection_add=[
+        ('sim', 'Sim'),
+        ('não', 'Não'),
+    ])
+    _allss_bairro = fields.Char("Bairro")
+    _allss_cod_mun_ibge = fields.Char("Cód. Município do IBGE")
+    _allss_coord = fields.Many2many('hr.employee', "Coordenador")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     _allss_titular_inst = fields.Char("Copiar Cliente para Titular da Instação?")
     # _allss_nome = fields.Char("Nome")
     _allss_cpf = fields.Char("CPF do Cliente")
