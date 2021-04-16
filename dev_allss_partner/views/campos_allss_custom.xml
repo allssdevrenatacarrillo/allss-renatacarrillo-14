@@ -15,8 +15,8 @@
             <!-- <field name="_allss_coord"/> -->
         </xpath>
         <!-- Renomeando "Casa" para "Nº" -->
-        <xpath expr="//field[@name='street']" position="attributes">
-            <attribute name='string'>Nº</attribute>
+        <xpath expr="//label[@name='street']" position="attributes">
+            <attribute name='label'>Nº</attribute>
         </xpath>
 
         <!-- Renomeando "Porta" para "2º Nº" -->
