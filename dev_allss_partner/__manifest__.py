@@ -9,6 +9,7 @@
     'description':'Campos Adicionais ALLSS',
     'depends': [
         'contacts',
+        
     ],
     'data': [
         #views
