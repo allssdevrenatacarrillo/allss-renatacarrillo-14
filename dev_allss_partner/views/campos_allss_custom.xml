@@ -23,7 +23,7 @@
         <!-- <xpath expr="//page[2]/group[1]/group[2]" position="after"> -->
         <xpath expr="//group[@name='sale']" position="after">
             <group string="Coordenadores" name="infCoord">
-                <field name="_allss_coordenador" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+                <!-- <field name="_allss_coordenador" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/> -->
             </group>
         </xpath>
 

@@ -16,4 +16,4 @@ class ResPartnerCustom(models.Model):
     _allss_cod_mun_ibge = fields.Char("Cód. Município do IBGE")
     _allss_num_1 = fields.Char("Nº")
     _allss_numb_2 = fields.Char("2º Nº")
-    _allss_coordenador = fields.Many2many('res.partner.tag', 'partner_id', 'user_id', string='Coordenador')
+    # _allss_coordenador = fields.Many2many('res.partner.tag', 'partner_id', 'user_id', string='Coordenador')
