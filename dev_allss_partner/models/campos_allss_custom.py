@@ -6,7 +6,7 @@ _logger = logging.getLogger(__name__)
 class ResPartnerCustom(models.Model):
     _inherit = "res.partner"
 
-    currency_id = fields.Many2one("res.currency", related="company_id.currency_id")
+    # currency_id = fields.Many2one("res.currency", related="company_id.currency_id")
     _allss_cnpj = fields.Char("CNPJ")
     _allss_insc_est = fields.Char("Inscrição Estadual")
     _allss_cnae = fields.Char("CNAE")
