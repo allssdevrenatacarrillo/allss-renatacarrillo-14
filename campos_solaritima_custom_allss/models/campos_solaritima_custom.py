@@ -14,7 +14,7 @@ class ResPartnerCustom(models.Model):
     _allss_cpf = fields.Char("CPF do Cliente")
     _allss_cnpj = fields.Char("CNPJ do Cliente")
     _allss_gps = fields.Char("GPS")
-    _allss_respon = fields.Char("Responsável")
+    _allss_respon = fields.Many2one('res.users', string='Responsável')
     _allss_met_pag = fields.Char("Método de Pagamento")
     _allss_origem = fields.Char("Origem")
     # GRUPO: DADOS DA INSTALAÇÃO
