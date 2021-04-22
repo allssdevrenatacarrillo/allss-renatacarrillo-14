@@ -109,5 +109,3 @@ class ResPartnerCustom(models.Model):
     _allss_url_monitoracao = fields.Char("URL de Monitoração")
     _allss_login_monitoracao = fields.Char("Login de Monitoração")
     _allss_senha_monitoracao = fields.Char("Senha de Monitoração")
-
-    
