@@ -9,7 +9,7 @@ class ResPartnerCustom(models.Model):
     currency_id = fields.Many2one("res.currency", related="company_id.currency_id")
     # GRUPO: CLIENTE
     _allss_fornecedor = fields.Char("Fornecedor")
-    _allss_titular_inst = fields.Selection([('sim', 'Sim'), ('não', 'Não')], string="Copiar Cliente para Titular da Instação?")
+    _allss_titular_inst = fields.Boolean(string="Copiar Cliente para Titular da Instação?")
     # _allss_nome = fields.Char("Nome")
     _allss_cpf = fields.Char("CPF do Cliente")
     _allss_cnpj = fields.Char("CNPJ do Cliente")
