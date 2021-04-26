@@ -42514,9 +42514,4 @@ msgstr "Registar"
 msgid "Unable to send email, please configure the sender's email address."
 msgstr "Não é possível enviar e-mail, configure o endereço de e-mail do remetente"
 
-#. module: sign
-#. openerp-web
-#: code:addons/sign/static/src/js/sign_backend.js:0
-#, python-format
-msgid "UPLOAD A PDF TEMPLATE"
-msgstr "CARREGAR UM MODELO PDF"
+# Traduções - Renata Carrillo - ALLSS 04/2021
