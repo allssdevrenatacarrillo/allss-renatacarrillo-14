@@ -10,12 +10,7 @@
     'depends': [
         'account_accountant',
     ],
-    'data': [
-        #views
-        # 'views/teste_casa_decimal.xml',
-        # 'views/account.tax.form.xml',
-        # 'views/account.view_tax_form.xml',
-    ],
+    'data': [],
     'demo': [
     ],
     'css': [],
