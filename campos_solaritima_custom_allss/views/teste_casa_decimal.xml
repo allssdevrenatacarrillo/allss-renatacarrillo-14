@@ -5,7 +5,7 @@
         <field name="model">account.tax</field>
         <field name="inherit_id" ref="account.view_tax_form"/>
         <field name="arch" type="xml"> 
-        <xpath expr="//field[@name='tax_scope']" position="after">
+        <xpath expr="//field[@name='amount_type']" position="after">
             <field name="amount"/>
         </xpath>
         </field>
