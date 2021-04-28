@@ -12,7 +12,8 @@
     ],
     'data': [
         #views
-        'views/teste_casa_decimal.xml',
+        # 'views/teste_casa_decimal.xml',
+        'views/account.tax.form.xml',
     ],
     'demo': [
     ],
