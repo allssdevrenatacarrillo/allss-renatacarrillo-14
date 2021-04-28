@@ -1,18 +1,18 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Campos Adicionais Solaritima',
+    'name': 'Casas Decimais',
     'version': '12.0.1.0.0',
     'licence': 'AGPL-3',
-    'category': 'Partner',
+    'category': 'Tax',
     'author': 'Renata Carrillo (ALLSS Soluções em Sistemas)',
-    'summary': 'Res Partner',
-    'description':'Campos Adicionais Solaritima',
+    'summary': 'Account Tax',
+    'description':'Casas Decimais Montante Imposto',
     'depends': [
-        'contacts',
+        'account_accountant',
     ],
     'data': [
         #views
-        'views/campos_solaritima_custom.xml',
+        'views/teste_casa_decimal.xml',
     ],
     'demo': [
     ],
