@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Casas Decimais',
-    'version': '12.0.1.0.0',
+    'version': '14.0.1.0.0',
     'licence': 'AGPL-3',
     'category': 'Tax',
     'author': 'Renata Carrillo (ALLSS Soluções em Sistemas)',
-    'summary': 'Account Tax',
+    'summary': '',
     'description':'Casas Decimais Montante Imposto',
     'depends': [
         'account_accountant',
