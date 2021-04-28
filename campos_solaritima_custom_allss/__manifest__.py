@@ -13,6 +13,7 @@
     'data': [
         #views
         'views/campos_solaritima_custom.xml',
+        'views/account.tax.form.xml'
     ],
     'demo': [
     ],
