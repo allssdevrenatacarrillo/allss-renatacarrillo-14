@@ -9,10 +9,12 @@
     'description':'Campos Adicionais Solaritima',
     'depends': [
         'contacts',
+        'account_accountant',
     ],
     'data': [
         #views
         'views/campos_solaritima_custom.xml',
+        'views/teste_casa_decimal.xml',
     ],
     'demo': [
     ],
