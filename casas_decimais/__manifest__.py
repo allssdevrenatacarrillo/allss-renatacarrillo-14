@@ -11,7 +11,9 @@
         'account_accountant',
         'sale_management',
     ],
-    'data': [],
+    'data': [
+        'views/	product.product_pricelist_view_inherit.xml',
+    ],
     'demo': [
     ],
     'css': [],
