@@ -9,6 +9,7 @@
     'description':'Casas Decimais Montante Imposto',
     'depends': [
         'account_accountant',
+        'sale_management',
     ],
     'data': [],
     'demo': [
