@@ -12,3 +12,8 @@ class ResPartnerCustom(models.Model):
     _inherit = "product.pricelist.item"
 
     price_discount = fields.Float('Desconto', default=1, store=True, digits=(12,11))
+
+class ResPartnerCustom(models.Model):
+    _inherit = "product.template"
+
+    list_price = fields.Float('Desconto', default=1, store=True, digits=(12,11))

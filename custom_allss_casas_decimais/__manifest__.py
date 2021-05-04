@@ -10,6 +10,7 @@
     'depends': [
         'account_accountant',
         'sale_management',
+        'stock',
     ],
     'data': [],
     'demo': [
