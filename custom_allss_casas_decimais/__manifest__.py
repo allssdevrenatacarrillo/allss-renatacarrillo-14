@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Casas Decimais (Montante) ALLSS',
+    'name': 'Casas Decimais ALLSS',
     'version': '14.0.1.0.0',
     'licence': 'AGPL-3',
     'category': 'Tax',
