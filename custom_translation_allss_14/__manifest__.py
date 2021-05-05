@@ -8,7 +8,7 @@
     'summary': '',
     'description':'Translation',
     'depends': [
-        # 'i18n',
+        'i18n',
     ],
     'data': [
         #views
