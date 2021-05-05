@@ -1,22 +1,12 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Translation Custom ALLSS',
-    'version': '14.0.0.0.0',
+    'description':'Used for Translation of the modules',
+    'category': 'Translation',
     'licence': 'AGPL-3',
-    'category': 'Translate',
     'author': 'Renata (ALLSS Soluções em Sistemas)',
-    'summary': '',
-    'description':'Translation',
-    'depends': [
-        'base',
-    ],
-    'data': [
-        #views
-    ],
-    'demo': [
-    ],
-    'css': [],
+    'website': '',
+    'version': '14.0.1.0.0',
+    'depends': ['base'],
     'installable': True,
-    'auto_install': True,
-    'application': False,
 }
