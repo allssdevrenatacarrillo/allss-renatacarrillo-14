@@ -1,1 +1,1 @@
-from . import custom_allss_vendor_bc
+# from . import custom_allss_vendor_bc
