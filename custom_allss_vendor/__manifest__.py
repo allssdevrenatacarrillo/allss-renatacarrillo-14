@@ -10,6 +10,7 @@
     'depends': [
         'sale_management',
         'contacts',
+        'project',
     ],
     'data': [
         #views
