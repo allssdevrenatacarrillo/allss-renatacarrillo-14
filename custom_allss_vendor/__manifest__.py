@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Campos Adicionais Solaritima',
+    'name': 'Vendedor em Tarefas do Projeto',
     'version': '14.0.1.0.0',
     'licence': 'AGPL-3',
     'category': 'Partner',
     'author': 'Renata Carrillo (ALLSS Soluções em Sistemas)',
     'summary': 'Res Partner',
-    'description':'Vendedor em Tarefas do Projeto',
+    'description':'Campo Vendedor na View da Tarefa dentro do módulo de Projeto',
     'depends': [
+        'sale_management',
         'contacts',
     ],
     'data': [
