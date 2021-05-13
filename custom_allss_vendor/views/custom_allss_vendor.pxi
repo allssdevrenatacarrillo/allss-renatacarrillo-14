@@ -7,5 +7,6 @@
         <field name="arch" type="xml"> 
 
         <h1>TEEEEEEESTE</h1>
+        <field name="user_id" class="o_task_user_field" domain="[('share', '=', False)]" can_create="true" can_write="true" modifiers="{}" id="user_id"/>
     </record>
 </data>
