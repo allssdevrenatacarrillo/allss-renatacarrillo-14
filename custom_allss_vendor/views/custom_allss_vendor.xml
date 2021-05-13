@@ -6,9 +6,9 @@
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml"> 
 
-        <xpath expr="//group[2]" position="after">
+        <xpath expr="//form[1]/sheet[1]/widget[1]/group[2]" position="after">
             <field name="user_id" class="o_task_user_field" domain="[('share', '=', False)]"/>
-            <p>TESTANDO</p>
+            <h1>TESTANDO</h1>
         </xpath>
     </record>
 </data>
