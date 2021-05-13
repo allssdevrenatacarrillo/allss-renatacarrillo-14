@@ -8,8 +8,8 @@
     'summary': 'Res Partner',
     'description':'Campo Vendedor na View da Tarefa dentro do módulo de Projeto',
     'depends': [
-        'sale_management',
-        'contacts',
+        # 'sale_management',
+        # 'contacts',
         'project',
     ],
     'data': [
