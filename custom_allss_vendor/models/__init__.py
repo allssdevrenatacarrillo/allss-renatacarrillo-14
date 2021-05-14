@@ -1,1 +1,1 @@
-from . import project
+from . import campos_allss_custom_vendor
