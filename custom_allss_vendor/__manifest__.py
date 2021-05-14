@@ -15,7 +15,7 @@
     ],
     'data': [
         #views
-        'views/custom_allss_vendor.xml',
+        # 'views/custom_allss_vendor.xml',
     ],
     'demo': [
     ],
