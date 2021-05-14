@@ -11,6 +11,7 @@
         'sale_management',
         'contacts',
         'project',
+        'sale',
     ],
     'data': [
         #views
