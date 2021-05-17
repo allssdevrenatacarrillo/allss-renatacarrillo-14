@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <record id="campos_allss_custom" model="ir.ui.view">
+        <field name="name">Campos Adicionais ALLSS</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml"> 
+
+        <field name="country_id" position="after">
+            <field name="_allss_num_1" placeholder="Nº"/>
+            <field name="_allss_numb_2" placeholder="2º Nº"/>
+            <field name="_allss_bairro" placeholder="Bairro"/>
+            <field name="_allss_cod_mun_ibge" placeholder="Cód Municipal IBGE"/>
+        </field>
+
+        <xpath expr="//field[@name='vat']" position="after">
+            <field name="_allss_cnpj"/>
+            <field name="_allss_insc_est"/>
+            <field name="_allss_cnae"/>
+            <field name="_allss_contrib"/>
+        </xpath>
+
+        <!-- <xpath expr="//page[2]/group[1]/group[2]" position="after"> -->
+        <xpath expr="//group[@name='sale']" position="after">
+            <group string="Coordenadores" name="infCoord">
+                <field name="_allss_coordenador" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
+            </group>
+        </xpath>
+
+        <!-- Renomeando "Casa" para "Nº" -->
+        <!-- <xpath expr="//field[@name='street']" position="attributes">
+            <attribute name='string'>Nº</attribute>
+        </xpath> -->
+
+        <!-- Renomeando "Porta" para "2º Nº" -->
+        <!-- <xpath expr="//field[@name='street_number2']" position="attributes">
+            <attribute name='string'>2º Nº</attribute>
+        </xpath> -->
+
+        </field>
+    </record>
+</data>
