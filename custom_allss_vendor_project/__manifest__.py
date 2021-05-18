@@ -1,16 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Vendedor em Tarefas do Projeto',
-    'version': '12.0.1.0.0',
+    'name': 'VENDEDOR NO PROJETO',
+    'version': '14.0.1.0.0',
     'licence': 'AGPL-3',
     'category': 'Partner',
     'author': 'Renata Carrillo (ALLSS Soluções em Sistemas)',
     # 'summary': 'Res Partner',
-    'description':'Campos Adicionais ALLSS',
+    'description':'VENDEDOR NO PROJETO',
     'depends': [
-        'contacts',
-        'project',
-        'sale',
+        # 'contacts',
+        # 'project',
+        # 'sale',
     ],
     'data': [
         #views
