@@ -1,1 +1,0 @@
-from . import campo_vendor_project
