@@ -3,7 +3,7 @@
     <record id="campos_allss_custom" model="ir.ui.view">
         <field name="name">VENDEDOR EM PROJETO</field>
         <field name="model">res.users</field>
-        <field name="inherit_id" ref=""/>
+        <field name="inherit_id" ref="project.task.form"/>
         <field name="arch" type="xml"> 
             <xpath expr="//field[@name='partner_id']" position="after">
                 <field name="user_id"/>
