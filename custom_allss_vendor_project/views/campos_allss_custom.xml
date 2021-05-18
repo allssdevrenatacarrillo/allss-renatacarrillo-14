@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <record id="campos_allss_custom" model="ir.ui.view">
+        <field name="name">Campos Adicionais ALLSS</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref=""/>
+        <field name="arch" type="xml"> 
+
+        </field>
+    </record>
+</data>
