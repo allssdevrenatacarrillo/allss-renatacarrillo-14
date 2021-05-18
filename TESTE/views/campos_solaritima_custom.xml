@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <data>
-    <record id="campos_solaritima_custom" model="ir.ui.view">
+    <record id="teste" model="ir.ui.view">
         <field name="name">VENDOR PROJECT</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
