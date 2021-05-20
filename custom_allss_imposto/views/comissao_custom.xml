@@ -11,7 +11,7 @@
         </field>
     </record>
 
-    <!-- <record id="account_invoice_supplier_tree_custom" model="ir.ui.view">
+    <record id="account_invoice_supplier_tree_custom" model="ir.ui.view">
         <field name="name">Comissão</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
@@ -20,8 +20,8 @@
                 <attribute name="string">Comissão</attribute>
             </xpath>
             <xpath expr="//field[@name='amount_tax']" position="after">
-                <field name="name" string="Referência/ Descrição"/>
+                <field name="name" string="Comissão"/>
             </xpath>
         </field>
-    </record> -->
+    </record>
 </odoo>
