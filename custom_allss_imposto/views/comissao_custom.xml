@@ -13,7 +13,7 @@
 
     <record id="comissao_tree" model="ir.ui.view">
         <field name="name">Comissão</field>
-        <field name="model">sale.order.line</field>
+        <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml"> 
             <xpath expr="//field[@name='tax_id']" position="attributes">
