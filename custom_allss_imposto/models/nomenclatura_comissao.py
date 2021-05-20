@@ -7,3 +7,4 @@ class ResPartnerCustom(models.Model):
     _inherit = "sale.order"
 
     amount_tax = fields.Float('Comissão', default=1, store=True)
+    teste_teste = fields.Float("TESTE")
