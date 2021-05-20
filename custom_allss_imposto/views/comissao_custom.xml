@@ -11,9 +11,9 @@
         </field>
     </record>
 
-    <record id="account_invoice_supplier_tree_custom" model="ir.ui.view">
+    <record id="sale_order_form_custom" model="ir.ui.view">
         <field name="name">Comissão</field>
-        <field name="model">sale.order</field>
+        <!-- <field name="model">sale.order</field> -->
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml"> 
             <xpath expr="//field[@name='tax_id']" position="attributes">
