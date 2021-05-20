@@ -11,7 +11,10 @@
         'account_accountant',
         'sale_management',
     ],
-    'data': [],
+    'data': [
+        #views
+        'views/comissao_custom.xml',
+    ],
     'demo': [
     ],
     'css': [],
