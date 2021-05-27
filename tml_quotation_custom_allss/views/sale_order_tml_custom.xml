@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_order_tml_custom" model="ir.ui.view">
+        <field name="name">sale.order.tml.custom</field>
+        <field name="model">sale.order.template</field>
+        <field name="inherit_id" ref="sale_management.sale_order_template_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='confirmation']" position="after">
+                <page string="Design" name="design">
+                    <group col='2'>
+                        <group string="Imagens">
+                            <field name="_allss_logo" widget="image" style="width: 40%"/>
+                            <field name="_allss_banner" widget="image" style="width: 40%; margin-top: 15px"/>
+                        </group>
+                    </group>
+                    <group string="Textos">
+                        <field name="_allss_presentation_text" widget="html"/>
+                        <field name="_allss_details_text" widget="html" style="magin-top: 20px"/>
+                        <field name="_allss_links" widget="html"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_order_custom" model="ir.ui.view">
+        <field name="name">sale.order.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='customer_signature']" position="after">
+                <page string="Assinatura do Responsável" name="response_signature">
+                    <group>
+                        <group>
+                            <field name="_allss_signed_by"/>
+                            <field name="_allss_signed_on"/>
+                            <field name="_allss_representative_signature" widget="signature"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

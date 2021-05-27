@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="custom_sale_order" inherit_id="sale.report_saleorder">
+        <!-- Substituição da call padrão do Odoo pela call da cotação customizada da Solaritima -->
+        <xpath expr="/t/t/t" position="replace">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="tml_quotation_custom_allss.report_sale_order_sol" t-lang="doc.partner_id.lang"/>
+            </t>    
+        </xpath>
+    </template>
+
+    <template id="assets_fonts" name="Assets Fonts" inherit_id="web.report_assets_common">
+        <xpath expr="." position="inside">
+            <link href="/tml_quotation_custom_allss/static/src/scss/style.scss" rel="stylesheet" type="text/scss"/>
+        </xpath>
+    </template>
+
+    <template id="report_sale_order_sol">
+        <t t-call="web.basic_layout">
+            <div class="quotation_custom_sol">
+                <section class="page_report">
+                    <section class="center">
+                        <div>
+                            <img t-if="doc.sale_order_template_id._allss_logo" t-attf-src="data:image/png;base64,#{doc.sale_order_template_id._allss_logo}" width="400"/>
+                            <img t-else="" src="/tml_quotation_custom_allss/static/src/img/logo_sol.jpg" alt="Logo" width="400"/>
+                        </div>
+                        <div class="title">
+                            <p>PROPOSTA TÉCNICO-COMERCIAL</p>
+                            <p class="highlighter" t-field="doc.name"></p>
+                        </div>
+                        <div>
+                            <img t-if="doc.sale_order_template_id._allss_banner" t-attf-src="data:image/png;base64,#{doc.sale_order_template_id._allss_banner}" width="700"/>
+                            <img t-else="" src="/tml_quotation_custom_allss/static/src/img/banner_sol.jpg" alt="Banner" width="700"/>
+                        </div>
+                        <div class="contact_data">
+                            <p><span t-field="doc.company_id.city"></span>, <span t-field="doc.date_order"></span> - <span t-field="doc.sale_order_template_id.number_of_days"></span></p>
+
+                            <div class="client_data">
+                                <p class="highlighter">
+                                    <strong>Cliente: </strong><span t-field="doc.partner_id"></span>
+                                </p>
+                                <p><span t-field="doc.partner_id.city"></span> - <span t-field="doc.partner_id.state_id"></span></p>
+                                <p><span t-field="doc.partner_id.email"></span> - <span t-field="doc.partner_id.phone"></span></p> 
+                            </div>
+
+                            <div>
+                                <strong>Representante SOLARITIMA: </strong><span t-field="doc.user_id"></span><br/>
+                                <p><span t-field="doc.user_id.work_email"></span> - <span t-field="doc.user_id.work_phone"></span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <span class="num_page_sol">1</span>
+                </section>
+                <section class="page_report">
+                    <table class="title_text">
+                        <tr>
+                            <th class="num">Ⅰ</th>
+                            <th class="text">Apresentação</th>
+                        </tr> 
+                    </table>
+                    <div class="presentation_text">
+                        <p t-if="doc.sale_order_template_id._allss_presentation_text" t-raw="doc.sale_order_template_id._allss_presentation_text"></p>
+                        <p t-else="">	
+                            Segue orçamento de <strong>Microgeração Solar Fotovoltaica Conectada à Rede Elétrica,</strong> segundo <strong>ANEEL 482/2012.</strong>
+                            Provemos <strong>tecnologias modernas e seguras</strong> para atender à demanda do mercado e estar perto de nossos clientes.<br/><br/>
+                            A <strong><a href="www.solaritima.com.br">SOLARITIMA</a></strong> atua por meio de representantes comerciais treinados para cumprir com as normas vigentes.<br/><br/>
+                            Oferecemos <strong>Soluções Completas</strong> com <strong>Inversores e Painéis Solares Fotovoltaicos</strong> homologados no <strong>INMETRO</strong>, frete gratuito, instalação por técnicos qualificados, projeto tramitado na Concessionária e conduzido por Engenheiro com ART CREA. 
+                            <strong>Monitoração da geração de energia em seu Celular.</strong>
+                            <strong>Garantias de 6 a 15 anos de Falha para Inversores e 25 anos de Desempenho acima de 80%.</strong><br/><br/>
+                            Acesse nosso <strong><a href="www.solaritima.com.br">site</a></strong> para mais informações sobre produtos
+                        </p>
+                    </div>
+                    <table class="title_text">
+                        <tr>
+                            <th class="num">&#8545;</th>
+                            <th class="text">Dados para Faturamento</th>
+                        </tr> 
+                    </table>
+                    <table class="tables_contact_info">
+                        <tr>
+                            <td>Nome - Razão Social</td>
+                            <td><span t-field="doc.partner_id.name"></span></td>
+                        </tr>
+                        <tr>
+                            <td>CPF - CNPJ</td>
+                            <td>
+                                <span t-if="doc.partner_id._allss_cpf" t-field="doc.partner_id._allss_cpf"></span>
+                                <span t-else="" t-field="doc.partner_id._allss_cnpj"></span> 
+                            </td> 
+                        </tr>
+                        <tr>
+                            <td>Telefone - E-mail</td>
+                            <td><span t-field="doc.partner_id.phone"></span> - <span t-field="doc.partner_id.email"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Endereço</td>
+                            <td><span t-field="doc.partner_id.street"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Cidade - Estado - CEP</td>
+                            <td><span t-field="doc.partner_id.city"></span> - <span t-field="doc.partner_id.state_id"></span> - <span t-field="doc.partner_id.zip"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Latitude - Longitude</td>
+                            <td><span t-fiedl="doc.partner_id.partner_latitude"> - <span t-field="doc.partner_id.partner_longitude"></span></span></td>
+                        </tr>
+                        <tr>
+                            <td>Método de Pagamento</td>
+                            <td><span t-field="doc.partner_id._allss_met_pag"></span></td>
+                        </tr>
+                    </table>
+                    <table class="title_text">
+                        <tr>
+                            <th class="num">&#8546;</th>
+                            <th class="text">Dados da Instalação para Projeto</th>
+                        </tr> 
+                    </table>
+                    <table class="tables_contact_info">
+                        <tr>
+                            <td>Nome - Razão Social</td>
+                            <td>
+                                <span t-field="doc.partner_id._allss_nome_titular_inst"> </span> 
+                                <span t-field="doc.partner_id._allss_sobr_titular_inst"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>CPF - CNPJ</td>
+                            <td>
+                                <span t-if="doc.partner_id._allss_cpf_inst" t-field="doc.partner_id._allss_cpf_inst"></span>
+                                <span t-else="" t-field="doc.partner_id._allss_cnpj_inst"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Endereço</td>
+                            <td><span t-field="doc.partner_id._allss_end_inst"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Cidade - Estado - CEP</td>
+                            <td><span t-field="doc.partner_id._allss_city_inst"></span> - <span t-field="doc.partner_id._allss_est_inst"></span> - <span t-field="doc.partner_id._allss_cep_inst"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Latitude - Longitude</td>
+                            <td><span t-fiedl="doc.partner_id._allss_gps_inst"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Concessionaria</td>
+                            <td><span t-field="doc.partner_id._allss_concessionaria"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Unidade Consumidora</td>
+                            <td><span t-field="doc.partner_id._allss_unid_consum_inst"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Classificação</td>
+                            <td><span t-field="doc.partner_id._allss_class_inst"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Estabelecimento</td>
+                            <td><span t-field="doc.partner_id._allss_tp_estab_inst"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Consumo Mensal (KWh)</td>
+                            <td><span class="highlighter" t-field="doc.partner_id._allss_md_consu_dimen"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Tipo de Telhado</td>
+                            <td><span t-field="doc.partner_id._allss_tp_telhado_dimen"></span></td>
+                        </tr>
+                    </table>
+                    <div class="contact_data_sol center">
+                        <p>
+                            <strong t-field="doc.company_id.name"></strong> - CNPJ <span t-field="doc.company_id._allss_cnpj"></span><br/>
+                            <span t-field="doc.company_id.street"></span> - <span t-field="doc.company_id.zip"></span> - <span t-field="doc.company_id.state_id"></span><br/>
+                            <span t-field="doc.company_id.phone"></span> - <span t-field="doc.company_id.email"></span> - <a href="www.solaritima.com.br">www.solaritima.com.br</a>
+                        </p>
+                    </div>
+                    <span class="num_page_sol">2</span>
+                </section>
+                <section class="page_report">
+                    <table class="title_text">
+                        <tr>
+                            <th class="num">&#8547;</th>
+                            <th class="text">Fornecimento de Equipamentos</th>
+                        </tr> 
+                    </table>
+                    <table class="equipments">
+                        <t t-foreach="doc.order_line" t-as="line">
+                            <tr class="title_table">
+                                <td>
+                                    <p style="line-height: 0.8;" t-field="line.product_id.categ_id"></p>
+                                    <p style="line-height: 0.8;" t-field="line.product_id"></p>
+                                </td>
+                                <td><strong>Valor<br/>Unitário</strong></td>
+                                <td><strong>Qtd</strong></td>
+                            </tr>
+                            <tr>
+                                <td class="large_cel">
+                                    <t t-set="mrp_bom" t-value="line.get_mrp_bom()"/>
+                                    <t t-foreach="mrp_bom" t-as="item">
+                                        <p style="line-height: 0.8;">
+                                            <span t-esc="item"></span>
+                                        </p>
+                                    </t> 
+                                </td>
+                                <td class="little_cel"><span t-field="line.price_subtotal"></span></td>
+                                <td class="little_cel"><span t-field="line.product_uom_qty"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="large_cel">
+                                    <span>
+                                        <strong>Alívio Mensal na Conta de Luz - Tarifa de R$ <span t-field="line.product_id._allss_dealership_tariff"></span>/KWh:</strong> <span class="highlighter">R$ </span><span t-field="line.product_id._allss_relief" class="highlighter"></span><br/>
+                                        <strong>Retorno do Investimento (Meses):</strong> <span class="highlighter"></span>
+                                    </span>
+                                </td>
+                                <td class="little_cel">Desconto</td>
+                                <td class="little_cel"><span t-field="line.discount"></span> %</td>
+                            </tr>
+                        </t>
+                        <tr>
+                            <td></td>
+                            <td class="little_cel"><strong>Total</strong></td>
+                            <td class="little_cel"><span t-field="doc.amount_total"></span></td>
+                        </tr>
+                    </table>
+                    <table class="title_text" style="margin-bottom: 0;">
+                        <tr>
+                            <th class="num">&#8548;</th>
+                            <th class="text">Opções de Pagamento</th>
+                        </tr>
+                    </table>
+                    <table class="options_pay">
+                        <tr>
+                            <td>Boletos Equipamentos + Serviços</td>
+                            <td>Data</td>
+                            <td>Parcela</td>
+                        </tr> 
+                        <tr>
+                            <td>1</td>
+                            <td>22/01/2021</td>
+                            <td><strong>R$ 8.888,88</strong></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>22/02/2021</td>
+                            <td><strong>R$ 3.992,00</strong></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>22/03/2021</td>
+                            <td><strong>R$ 3.992,00</strong></td>
+                        </tr>
+                    </table>
+                    <table class="financing">
+                        <tr>
+                            <td style="width: 45%;"><span t-field="doc._allss_financing_simulator.name"></span></td>
+                            <td>Carência</td>
+                            <td>Parcela</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Entrada</strong></td>
+                            <td></td>
+                            <td><strong>R$</strong></td>
+                        </tr>
+                    <t t-foreach="doc._allss_financing_simulator._allss_financing_lines" t-as="line">
+                        <t t-if="line._allss_active">
+                            <t t-if="line._allss_intial_validity &lt; doc.date_order &amp; line._allss_final_validity &gt; doc.date_order">
+                                <t t-if="doc._allss_period == 'p_30'">
+                                    <t t-if="line._allss_period == 30">
+                                        <tr>
+                                            <td>+ <span t-field="line._allss_description"></span></td>
+                                            <td><span t-field="line._allss_period"></span> dias</td>
+                                            <td>R$ <span t-field="line._allss_parcel"></span></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <t t-elif="doc._allss_period == 'p_120'">
+                                    <t t-if="line._allss_period == 120">
+                                        <tr>
+                                            <td>+ <span t-field="line._allss_description"></span></td>
+                                            <td><span t-field="line._allss_period"></span> dias</td>
+                                            <td>R$ <span t-field="line._allss_parcel"></span></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <t t-else="">
+                                    <tr>
+                                        <td>+ <span t-field="line._allss_description"></span></td>
+                                        <td><span t-field="line._allss_period"></span> dias</td>
+                                        <td>R$ <span t-field="line._allss_parcel"></span></td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </t>
+                    </t>
+                    </table>
+                    <div class="contact_data_sol center">
+                        <p>
+                            <strong t-field="doc.company_id.name"></strong> - CNPJ <span t-field="doc.company_id._allss_cnpj"></span><br/>
+                            <span t-field="doc.company_id.street"></span> - <span t-field="doc.company_id.zip"></span> - <span t-field="doc.company_id.state_id"></span><br/>
+                            <span t-field="doc.company_id.phone"></span> - <span t-field="doc.company_id.email"></span> - <a href="www.solaritima.com.br">www.solaritima.com.br</a>
+                        </p>
+                    </div>
+                    <span class="num_page_sol">3</span>
+                </section>
+                <section class="page_report">
+                    <table class="title_text">
+                        <tr>
+                            <th class="num">&#8549;</th>
+                            <th class="text">Detalhamentos e Exclusões</th>
+                        </tr> 
+                    </table>
+                    <div class="text_details">
+                        <p t-if="doc.sale_order_template_id._allss_details_text" t-field="doc.sale_order_template_id._allss_details_text"></p>
+                        <p t-else="">
+                            <strong>-Serviços Excluídos:</strong> Pára-raios, estruturas de fixação com inclinação diferente do telhado, taxas governamentais, obras civis, abrigos, reformas de padrão da concessionária, eletrodutos, reforço em estruturas, reposição de telhas e bases para solo. Não nos
+                            responsabilizamos por atrasos injustificados da Concessionária no trâmite do Projeto. Tarifas mínimas de Energia da Concessionária
+                            dependem do tipo de Conexão (Monofásica, Bifásica ou Trifásica). Não auditamos o medidor de energia para vícios pré-existentes.<br/>
+                            <strong>-Pré-Requisitos do Cliente:</strong> <span class="highlighter">Aterramento e Ponto de Conexão no Telhado em 220V (Fase-Fase-Terra) com cabos de 4mm2 até o
+                            Quadro de Distribuição mais próximo. Disponibilidade de Wi-Fi 2,4 GHz no telhado para monitoração.</span><br/>
+                            <strong>-Desempenho da Geração de Energia:</strong> Guia Solarimétrico <strong class="highlighter">Global Solar Atlas</strong>, com referência <strong class="highlighter">Sorocaba-SP.</strong><br/>
+                            <strong>-Faturamento para Financiamentos:</strong> Notas Fiscais independentes para Distribuidor e provedor de Serviços.<br/>
+                            <strong>-Recebimento de Materiais:</strong> Sugerimos a <span class="highlighter"><strong>Confira a ENTREGA dos Equipamentos,</strong> com <strong>RESSALVA</strong>se necessário na NF.</span><br/>
+                            <span class="highlighter"><strong>-Disponibilidade:</strong> Nossas Transportadoras e Instaladores não operam aos finais de semana para Entregas.</span><br/>
+                            <strong>-Armazenamento pelo Cliente:</strong> Solicitamos espaço abrigado para armazenamento por até 15 dias.<br/>
+                            <strong>-Montagem:</strong> Agendaremos instaladores para trabalho de <strong class="highlighter">Segunda a Sexta-Feira, das 8:00 a 17:00 hs.</strong><br/>
+                            <strong>-Política de Cancelamento:</strong> Retenção de 5% para desistência pelo cliente antes de 30 dias da entrega do pedido.<br/>
+                            <strong>-Prazo Total de Projeto, Entrega, Instalação e Troca do Medidor pela Concessionária:</strong> 60 a 90 dias.<br/>
+                            <strong>-Ativação do Sistema:</strong> Evite a ativação do sistema antes da Troca do Medidor, sujeito a multa pela Concessionária (TOI)
+                        </p>                    
+                    </div>
+                    <table class="title_text">
+                        <tr>
+                            <th class="num">&#8550;</th>
+                            <th class="text">Aceitação da Proposta pelo Cliente</th>
+                        </tr> 
+                    </table>
+                    <table class="assign">
+                        <tr>
+                            <td colspan="2" class="title">Integrador Contratado para Serviços</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Razão Social - CNPJ</strong></td>
+                            <td>
+                                <span t-field="doc.company_id.name"></span> - 
+                                <span t-field="doc.company_id._allss_cnpj"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Responável Técnico</strong></td>
+                            <td><span t-field="doc._allss_signed_by"></span> - <span t-field="doc._allss_signed_by.job_title"></span> - <span t-field="doc._allss_signed_by._allss_prof_register"></span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Assinatura Local Data</strong></td>
+                            <td>
+                                <img t-if="doc._allss_representative_signature" t-attf-src="data:image/png;base64,#{doc._allss_representative_signature}" width="100"/>
+                                <span t-field="doc._allss_signed_on"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="assign_costumer">
+                        <tr>
+                            <td colspan="2" class="title">Cliente Contratante</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nome - CPF - CNPJ</strong></td>
+                        <td><span t-field="doc.signed_by"></span> - <span t-if="doc.partner_id._allss_cpf" t-field="doc.partner_id._allss_cpf"></span><span t-else="" t-field="doc.partner_id._allss_cnpj"></span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Assinatura Local Data</strong></td>
+                            <td>
+                                <span t-field="doc.signature" style="text-align: left;"></span>
+                                <span t-field="doc.signed_on"></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="links">
+                        <p>CATÁLOGOS DOS MICROINVERSORES: <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/8d323b9c2d6b4d2bb050bbc7914143b7.jpg" target="_blank">Hoymiles.</a></p>
+                        <p>CÁTALOGOS DOS PAINÉIS SOLARES: <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/1cdc622206514f7fb2f1f63bd49c2cbf.jpg" target="_blank">SUNOVA</a>, 
+                        <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/1ab463e79d274dc7942d5a50adbb5071.jpg" target="_blank">JA SOLAR</a>, 
+                        <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/e37d227e11814a00b81d39c66323ab32.jpg" target="_blank">TRINA</a>, 
+                        <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/db20d6f70fbd4fa78d2c095073f61477.jpg" target="_blank">JINKO</a>, 
+                        <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/f05b0207145c44238e3c858bf4b6cd0c.jpg" target="_blank">LONGI</a> e 
+                        <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/cc64bf35d9724aee99dac1e160a8cbee.jpg" target="_blank">CANADIAN</a>.</p>
+                        <p>APARÊNCIA DA INSTALAÇÃO: <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/6c5126acd8954d209cc926df056a1ea1.png" target="_blank">Equipamentos no Telhado</a> e 
+                        <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/9cea4716419241c7a29f7c77bf2597e5.jpg" target="_blank">Finalização do Trabalho.</a></p>
+                        <p>GERAÇÃO DE ENERGIA ESTIMADA PARA REFERÊNCIA DE 100 KWH/MÊS: <a href="https://stgploomescrmprd01.blob.core.windows.net/crm-prd/17419055EC07/Images/6e131b10238a46b994aa102b8f2dd405.jpg" target="_blank">Gráfico.</a></p>
+                    </div>
+                    <div class="observation">
+                        <span>Observações:</span>
+                        <p t-field="doc.note"></p>
+                    </div>
+                    <div class="contact_data_sol center">
+                        <p>
+                            <strong t-field="doc.company_id.name"></strong> - CNPJ <span t-field="doc.company_id._allss_cnpj"></span><br/>
+                            <span t-field="doc.company_id.street"></span> - <span t-field="doc.company_id.zip"></span> - <span t-field="doc.company_id.state_id"></span><br/>
+                            <span t-field="doc.company_id.phone"></span> - <span t-field="doc.company_id.email"></span> - <a href="www.solaritima.com.br">www.solaritima.com.br</a>
+                        </p>
+                    </div>
+                    <span class="num_page_sol">4</span>
+                </section>
+            </div>
+        </t>
+    </template>
+</odoo>

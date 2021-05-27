@@ -1,0 +1,247 @@
+@font-face{
+    font-family: LFT_Etica_Reg;
+    src: url(/tml_quotation_custom_allss/static/src/fonts/LFT_Etica_Reg.otf);
+}
+
+@font-face{
+    font-family: LTF_Etica_Bold;
+    src: url(/tml_quotation_custom_allss/static/src/fonts/LFT_Etica_Bold.otf);
+}
+
+.quotation_custom_sol{
+    font-family: LFT_Etica_Reg; 
+    color: #333637;
+    margin: 0;
+    padding: 0;
+
+    .page_report{
+        width: 100%;
+        height: 1245px;
+        position: relative;
+    }
+    .num_page_sol{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .center{
+        width: 100%;
+        text-align: center;
+    }
+    .title{
+        font-size: 19px;
+        margin: 35px 0 25px 0;
+        font-weight: bold;
+    }
+    .highlighter{
+        background-color: #ffff00;
+        display: inline;
+    }
+    .contact_data{
+        font-size: 18px;
+        margin-top: 25px;
+    }
+    .client_data{
+        margin: 35px 0 25px 0;  
+    }
+    .title_text{
+        width: 100%;
+        font-size: 25px;
+        font-family: LTF_Etica_Bold;
+        margin: 25px 0;
+    }
+    .num{
+        width: 8%;
+        color: #303030;  
+        background-color: #ffff33;
+        text-align: center;
+    }
+    .text{
+        width: 92%;
+        color: white;
+        background-color: #003399;
+        padding: 5px 0 5px 15px;
+    }
+    .presentation_text{
+        p{
+            font-size: 15px;
+            padding-left: 45px;
+        }
+        a{
+            color: #003aad;
+        }
+    }
+    .tables_contact_info{
+        width: 100%;
+        border-collapse: collapse;
+        tr{
+            td{
+                border: 1px solid #424242;
+                text-align: center;
+                padding: 2px;
+            }
+        }
+        td:nth-child(1){
+            font-weight: bold;
+            color: black;
+            width: 33%;
+        }
+    }
+    .contact_data_sol{
+        position: absolute;
+        bottom: 0;
+        font-size: 14px;
+        a{
+            color: #2c4a87;
+            font-weight: bold;
+        }
+    }
+    .equipments{
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+        .title_table{
+            background-color: #003399;
+            color: white;
+            font-size: 24px;
+            td:nth-child(1){
+                width: 70%;
+                font-size: 20px;
+                padding: 3px ;
+            }
+            td:nth-child(2){
+                width: 15%;
+                font-size: 18px;
+                padding: 6px 0;
+                text-align: center;
+                vertical-align: middle;
+            }
+            td:nth-child(3){
+                width: 15%;
+                font-size: 18px;
+                padding: 6px 0;
+                text-align: center;
+                vertical-align: middle;
+            }
+        }
+        td{
+            border: 1px solid #000000;
+        }
+        .little_cel{
+            text-align: center;
+            vertical-align: middle;
+            padding: 10px 0;
+        }
+        .large_cel{
+            padding: 3px 0 3px 20px;
+            vertical-align: middle;
+        }
+    }
+    .options_pay{
+        width: 100%;
+        tr:nth-child(1){
+            background-color: #003399;
+            color: white;
+            td:nth-child(1){
+                width: 45%;
+            }
+            td{
+                font-size: 19px;
+                border: 0;
+                padding-left: 5px;
+            }
+        }
+        td{
+            border-bottom: 2px solid #aaaaaa;
+            font-size: 15px;
+            padding: 4px 3px;
+        }
+    }
+    .financing{
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 25px;
+        tr:first-child{
+            background-color: #003399;
+            color: white;
+            td{    
+                font-size: 19px;
+            } 
+        }
+        tr:last-child{
+            font-weight: bold;
+        }
+        td{
+            font-size: 15px;
+            padding: 4px 3px;
+            border: 1px solid black;
+        }
+    }
+    .text_details{
+        font-size: 15px;
+    }
+    .assign{
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        .title{
+            width: 100%;
+            font-size: 20px;
+            color: white;
+            background-color: #003399;
+        }
+        td{
+            border: 1px solid black;
+            padding: 2px 0;
+            font-size: 15px;
+        }
+        tr{
+            td:nth-child(1){
+                width: 25%;
+            }
+        }
+    }
+    .assign_costumer{
+        width: 100%;
+        border-collapse: collapse;
+        text-align: center;
+        margin: 25px 0;
+        .title{
+            width: 100%;
+            font-size: 20px;
+            color: white;
+            background-color: #003399;
+        }
+        td{
+            border: 1px solid black;
+            padding: 2px 0;
+            font-size: 15px;
+        }
+        tr{
+            td:nth-child(1){
+                width: 25%;
+            }
+        }
+    }
+    .links{
+        font-weight: bold;
+        font-size: 12px;
+        p{
+            margin-bottom: 3px;
+        }
+        a{
+            color: #003399;
+            text-decoration: underline;
+        }
+    }
+    .observation{
+        margin-top: 25px;
+        span{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+}

@@ -13,7 +13,6 @@
     'data': [
         #views
         'views/campos_solaritima_custom.xml',
-        'views/sale_order_form_custom.xml',
     ],
     'demo': [
     ],
