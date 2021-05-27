@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_order_custom" model="ir.ui.view">
+        <field name="name">sale.order.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='order_line']/tree/field[@name='tax_id']" position="after">
+                <field name="acres_ids" string="Acréscimos"  widget="many2many_tags" options="{'no_create': True}"/>
+                <field name="comiss_ids" string="Comissão"  widget="many2many_tags" options="{'no_create': True}"/>
+            </xpath>
+            <xpath expr="//field[@name='amount_tax']" position="after">
+                <field name="acres_total" string="Acréscimos" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                <field name="comiss_total" string="Comissão" widget='monetary' options="{'currency_field': 'currency_id'}"/>
+                
+            </xpath>
+
+
+        </field>
+
+    </record>
+
+</odoo>
+
+
+<!-- 
+<xpath expr="//field[@name='order_line']/tree/field[@name='price_unit']" position="before">
+                    <field name="route_id" groups="sale_stock.group_route_so_lines" options="{'no_create': True}"/>
+                </xpath> -->
