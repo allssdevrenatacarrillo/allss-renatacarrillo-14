@@ -2,7 +2,7 @@
 <data>
     <record id="campo_vendor_project" model="ir.ui.view">
         <field name="name">Vendedor no Projeto</field>
-        <field name="model">project.task</field>
+        <field name="model">sale.order</field>
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml"> 
         <xpath expr="//field[@name='partner_id']" position="after">
