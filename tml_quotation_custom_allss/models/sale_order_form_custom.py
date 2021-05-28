@@ -21,8 +21,7 @@ class SaleOrder(models.Model):
         comiss_line = 0
         for line in self.order_line:
             for acres in line.acres_ids:
-                acres_line += line.price_unit / 100 * acres.amount 
-                acres_line * line.product_uom_qty
+                acres_line += line.price_unit / 100 * acres.amount * line.product_uom_qty
             for comiss in line.comiss_ids:
                 comiss_line += line.price_unit / 100 * comiss.amount
                 comiss_line * line.product_uom_qty
