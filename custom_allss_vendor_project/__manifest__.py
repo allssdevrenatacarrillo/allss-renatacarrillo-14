@@ -14,7 +14,7 @@
     ],
     'data': [
         #views
-        'views/campo_vendor_project.xml',
+        # 'views/campo_vendor_project.xml',
     ],
     'demo': [],
     'css': [],
