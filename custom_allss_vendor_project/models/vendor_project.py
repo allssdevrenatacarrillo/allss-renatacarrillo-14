@@ -6,4 +6,4 @@ _logger = logging.getLogger(__name__)
 class ResPartnerCustom(models.Model):
     _inherit = "res.users"
 
-    _allss_user_id = fields.Many2one("Vendedor")
+    _allss_user_id = fields.Char("Vendedor")
