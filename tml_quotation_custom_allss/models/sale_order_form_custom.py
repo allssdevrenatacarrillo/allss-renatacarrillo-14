@@ -32,8 +32,9 @@ class SaleOrder(models.Model):
                 _logger.warning(serv_price)
 
         self.update({
+            'amount_untaxed': self.amount_untaxed - serv_price,
             'acres_total': acres_line,
             'comiss_total': comiss_line,
-            'amount_total': self.amount_total + acres_line + comiss_line - serv_price,
+            'amount_total': self.amount_total + acres_line + comiss_line,
         })
 
