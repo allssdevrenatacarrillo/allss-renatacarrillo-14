@@ -26,11 +26,10 @@ class SaleOrder(models.Model):
                 acres_line += line.price_unit / 100 * acres.amount * line.product_uom_qty
             for comiss in line.comiss_ids:
                 comiss_line += line.purchase_price / 100 * comiss.amount * line.product_uom_qty
-            for serv in line.is_serv:
-                if line.is_serv:
-                    _logger.warning("******* > ____________IS SERVICE____________ <***********")
-                    serv_price = line.price_unit
-                    _logger.warning(serv_price)
+            if line.is_serv:
+                _logger.warning("******* > ____________IS SERVICE____________ <***********")
+                serv_price = line.price_unit
+                _logger.warning(serv_price)
 
         self.update({
             'acres_total': acres_line,
