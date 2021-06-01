@@ -7,6 +7,7 @@ class SaleOrderFormCustom(models.Model):
 
     acres_ids = fields.Many2many('account.tax', 'account_tax_acres', string='Acréscimos')
     comiss_ids = fields.Many2many('account.tax', 'account_tax_comiss', string='Comissão')
+    is_serv = fields.Boolean(default=False, string='Serviço')
 
 
 class SaleOrder(models.Model):
