@@ -29,7 +29,7 @@ class SaleOrder(models.Model):
             if line.is_serv:
                 _logger.warning("******* > ____________IS SERVICE____________ <***********")
                 serv_price += line.price_unit
-                _logger.warning(serv_price)
+                _logger.warning(serv_price) 
 
         self.update({
             'amount_untaxed': self.amount_untaxed - serv_price,
