@@ -21,6 +21,7 @@ class SaleOrder(models.Model):
         acres_line = 0
         comiss_line = 0
         serv_price = 0
+        serv_cost = 0
         for line in self.order_line:
             for acres in line.acres_ids:
                 acres_line += line.price_unit / 100 * acres.amount * line.product_uom_qty
@@ -29,9 +30,12 @@ class SaleOrder(models.Model):
             if line.is_serv:
                 _logger.warning("******* > ____________IS SERVICE____________ <***********")
                 serv_price += line.price_unit
+                serv_cost += line.purchase_price
+
                 _logger.warning(serv_price) 
 
         self.update({
+            'margin': self.margin - serv_price - serv_cost, 
             'amount_untaxed': self.amount_untaxed - serv_price,
             'acres_total': acres_line,
             'comiss_total': comiss_line,
