@@ -20,14 +20,13 @@ class SaleOrder(models.Model):
     def product_id_change(self):
         acres_line = 0
         comiss_line = 0
-        is_serv = False
         for line in self.order_line:
             for acres in line.acres_ids:
                 acres_line += line.price_unit / 100 * acres.amount * line.product_uom_qty
             for comiss in line.comiss_ids:
                 comiss_line += line.purchase_price / 100 * comiss.amount * line.product_uom_qty
-        if line.is_serv:
-            _logger.warning("******* > ____________IS SERVICE____________ <***********")
+            if line.is_serv:
+                _logger.warning("******* > ____________IS SERVICE____________ <***********")
 
         self.update({
             'acres_total': acres_line,
