@@ -27,6 +27,7 @@ class SaleOrder(models.Model):
                 comiss_line += line.purchase_price / 100 * comiss.amount * line.product_uom_qty
             if line.is_serv:
                 _logger.warning("******* > ____________IS SERVICE____________ <***********")
+                line.price_unit = 0
 
         self.update({
             'acres_total': acres_line,
