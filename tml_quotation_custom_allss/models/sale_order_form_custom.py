@@ -28,7 +28,7 @@ class SaleOrder(models.Model):
                 comiss_line += line.purchase_price / 100 * comiss.amount * line.product_uom_qty
             if line.is_serv:
                 _logger.warning("******* > ____________IS SERVICE____________ <***********")
-                serv_price = line.price_unit
+                serv_price += line.price_unit
                 _logger.warning(serv_price)
 
         self.update({
