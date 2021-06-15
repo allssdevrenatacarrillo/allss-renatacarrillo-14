@@ -31,7 +31,6 @@ class SaleOrder(models.Model):
                 _logger.warning("******* > ____________IS SERVICE____________ <***********")
                 serv_price += line.price_unit
                 serv_cost += line.purchase_price
-
                 _logger.warning(serv_price) 
 
         self.update({
