@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <xpath expr="//field[@name='order_line']/tree/field[@name='tax_id']" position="after">
                 <field name="acres_ids" string="Acréscimos"  widget="many2many_tags" options="{'no_create': True}"/>
-                <field name="comiss_ids" string="Comissão"  widget="many2many_tags" options="{'no_create': False}"/>
+                <field name="comiss_ids" string="Comissão"  widget="many2many_tags" options="{'no_create': True}" edit="True"/>
                 <field name="is_serv"/>
             </xpath>
             <xpath expr="//field[@name='amount_tax']" position="after">
