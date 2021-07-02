@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="website_page" model="ir.ui.view">
+        <field name="name">website.page</field>
+        <field name="model">website.page</field>
+        <!-- <field name="inherit_id" ref="hr.view_employee_form"/> -->
+        <field name="arch" type="xml">
+            <field name="teste"/>  
+        </field>
+    </record>
+</odoo>

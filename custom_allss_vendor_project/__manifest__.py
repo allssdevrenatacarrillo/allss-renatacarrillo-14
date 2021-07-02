@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': 'Vendedor no Projeto',
+    'name': 'ALLSS - Vendedor no Projeto',
     'version': '14.0.1.0.0',
     'licence': 'AGPL-3',
-    'category': '',
+    'category': 'Project',
     'author': 'Renata Carrillo (ALLSS Soluções em Sistemas)',
-    'summary': '',
+    'summary': 'ALLSS VENDOR',
     'description':'Vendedor referenciado no módulo de Projeto',
     'depends': [
-        'account_accountant',
+        # 'account_accountant',
         'sale_management',
         'project',
+        'crm',
     ],
     'data': [
         #views
@@ -19,6 +20,6 @@
     'demo': [],
     'css': [],
     'installable': True,
-    'auto_install': True,
+    'auto_install': False,
     'application': False,
 }
